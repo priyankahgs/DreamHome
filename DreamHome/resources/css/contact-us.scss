@@ -1,0 +1,72 @@
+@import "custom.scss";
+@import "service.scss";
+
+#innerBanner{
+    .carousel-item{
+        height: 20vh;
+        @media (min-width: 768px) {
+            height: 30vh;
+        }  
+        @media (min-width: 1224px) {
+            height: 439px;
+        }        
+    }
+}
+.light-grey{
+    position: relative;
+    @media (min-width: 768px) {
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background-color: #f5f5f5;
+        }
+    }
+    
+}
+.con-info{
+    padding: 2rem 1rem;
+    background-color: #f5f5f5;
+    @media (min-width: 768px) {
+        padding: 1rem 1rem 1rem 0;
+    }
+    @media (min-width: 992px) {
+        padding: 4rem 4.5rem 2rem;
+    }
+    ul {
+        li{
+            padding: 1rem 0 1rem;
+            font-weight: 500;
+            display: inline-flex;
+            width: 100%;
+            img{
+                width: 30px;
+                height: 100%;
+            }
+            a{
+                text-decoration: none;
+                font-weight: 500;
+                overflow-wrap: anywhere;
+            }
+        }
+    }
+}
+.Style-home{
+    form{
+        padding: 2rem 1rem;
+        @media (min-width: 768px) {
+            padding: 2rem 1rem 1rem;
+        }
+        @media (min-width: 992px) {
+            padding: 4rem 4.5rem 2rem;
+        }
+        h4,p{
+            color: #fff;
+        }
+    }
+}
+.footer{ background-color: #2c2c2c;}
+.dark-form .form-control{color:#fff}

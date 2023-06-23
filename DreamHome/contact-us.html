@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Berger Dream Homes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/contact-us.css" rel="stylesheet">
+    <link rel="icon" href="resources/images/favicon.jpg">
+    <script src="resources/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="resources/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/slick-theme.css" />
+    <script type="text/javascript" src="resources/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="resources/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="resources/js/slick.js"></script>
+    <script type="text/javascript" src="resources/js/slick.min.js"></script>
+    <script src="resources/js/custom.js"></script>
+</head>
+
+<style>
+    .form-control.select-css.form-ico {
+        color: #fff
+    }
+
+    form label span {
+        color: #fff
+    }
+
+    #more {
+        display: none;
+        margin-top: 0.5rem;
+    }
+
+    abbr {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .abbr-one-line {
+        display: initial;
+    }
+
+    .btn-dark:hover {
+        cursor: pointer;
+    }
+
+    .form-control.select-css.form-ico {
+        background: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        padding-left: 0rem !important;
+        border-bottom: 1px solid #bfbfbf;
+        padding: 0;
+        padding: 0.5rem 0rem 0rem !important;
+        font-weight: 500;
+        background: #32322e !important;
+        height: calc(2.5rem + 2px);
+    }
+
+        .form-control.select-css.form-ico:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+    .form-floating select option {
+        background: #32322e;
+    }
+</style>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="resources/images/logo.png" alt="" title="" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="index.html" class="nav-link " aria-current="page">Home</a></li>
+                        <li class="nav-item"><a href="service.html" class="nav-link">Service</a></li>
+                        <li class="nav-item"><a href="ideas.html" class="nav-link">Ideas</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="contact-us.html" class="nav-link active hover-underline-animation">Contact Us</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Request Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- banner -->
+        <div id="innerBanner" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url(resources/images/contactus-bnr.jpg);">
+                    <!-- <div class="container">
+                      <div class="d-grid">
+                      <div class="dark-content">
+                        <h2>Discover<br> Our Luxurious<br>  Design Themes</h2>
+                      </div>
+
+                    </div>
+                    </div> -->
+                </div>
+            </div>
+            <ul class="rightSticky">
+                <li>
+                    <a href="#"><img src="resources/images/whatsapp-icon.svg" class="img-fluid"></a>
+                </li>
+                <li>
+                    <a href="index.html#consultForm"><img src="resources/images/email-icon.svg" class="img-fluid"></a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- end of banner -->
+    </header>
+    <!-- main container -->
+    <input type="hidden" id="hdnPageFlag" value="Contact Us" />
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3 class="mb-3">Get In Touch</h3>
+                    <p>For more general enquires, use the form below to contcat our head office:</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dark-bg light-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 z-index-1 con-info">
+                    <h4 class="pb-4">Contact Info</h4>
+                    <p><strong>Berger Paints India Limited.</strong></p>
+                    <ul class="list-unstyled p-0 m-0">
+                        <li><img src="resources/images/location-icon.png" class="img-fluid pe-2" alt="location">Berger House, 129 Park Street, Kolkata 700017</li>
+                        <li><img src="resources/images/phone-icon.svg" class="img-fluid pe-2" alt="location">+91 33 2229 9724 / 2229 6005 / 06 / 1</li>
+                        <li><img src="resources/images/toll-free-icon.svg" class="img-fluid pe-2" alt="location">1800 103 6030</li>
+                        <li><img src="resources/images/sms-icon.svg" class="img-fluid pe-2" alt="location">SMS 'XP' to 56767</li>
+                        <li><img src="resources/images/email-c-icon.svg" class="img-fluid pe-2" alt="location"><a href="email:consumerfeedback@bergerindia.com">consumerfeedback@bergerindia.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 Style-home">
+                    <form id="consultForm" class="dark-form">
+                        <h4>Consult For Your Dream Home</h4>
+                        <div class="form-floating">
+                            <input type="text" maxlength="50" name="c" onchange="getValidationMessageName();" onkeydown="return isAlphabetKey(event, 'name')" id="txtexpName" class="form-control form-ico form-ico-01 undefined" required="" placeholder="Your Name">
+
+                            <label for="name">Name<span>*</span></label>
+                            <small id="spnName" class="form-text text-danger"></small>
+                        </div>
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="txtexpEmail" placeholder="Enter email" name="txtexpEmail" maxlength="50" onchange="getValidationMessageEmail();" required="">
+                            <label for="email">Email ID<span>*</span></label>
+                            <small id="spnEmail" class="text-danger"></small>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtexpPhone" placeholder="Mobile Number" name="txtexpPhone" maxlength="10" onchange="getValidationMessagePhone();" onkeydown="return isNumberKey(event,'number')" required="">
+                            <label for="number">Mobile Number<span>*</span></label>
+                            <small id="spnMobileNumber" class="text-danger"></small>
+                        </div>
+
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtexpPinCode" placeholder="City Pincode" maxlength="6" name="txtexpPinCode" onchange="getValidationMessagePinCode();" onkeydown="return isNumberKeyy(event,'number')" required="">
+                            <label for="pincode">Site Pin Code<span>*</span></label>
+                            <small id="spnPinCode" class="text-danger"></small>
+                        </div>
+                        <div class="form-floating">
+                            <select name="City" id="City" class="form-control select-css form-ico" onchange="CityChange()">
+                                <option value="0" selected="">City*</option>
+                                <option value="Bangalore">Bangalore </option>
+                                <option value="Others">Others </option>
+
+                            </select>
+
+                            <small id="spnCity" class="text-danger"></small>
+                        </div>
+                        <div id="Div_Others" style="display:none">
+                            <div class="form-floating">
+                                <p style="color:white">We are currently offering DREAM HOME service in Bangalore. We will get in touch with you when we start the service in your city. Thank you.</p>
+                            </div>
+                        </div>
+                        <div id="Div_Bangalore" style="display:none">
+                            <div class="form-floating">
+                                <select name="PreferredLanguage" id="PreferredLanguage" class="form-control select-css form-ico">
+                                    <option value="0" selected="">Preferred Language*</option>
+                                    <option value="English">English </option>
+                                    <option value="Hindi">Hindi </option>
+                                    <option value="Kannada">Kannada </option>
+                                </select>
+
+                                <small id="spnPreferredLanguage" class="text-danger"></small>
+                            </div>
+                            <div class="form-floating">
+                                <select name="DoingUpFor" id="DoingUpFor" class="form-control select-css form-ico">
+                                    <option value="0" selected="">I am doing up my*</option>
+                                    <option value="Apartment">Apartment </option>
+                                    <option value="Villa">Villa </option>
+                                    <option value="Bungalow">Bungalow </option>
+                                </select>
+
+                                <small id="spnDoingUpFor" class="text-danger"></small>
+                            </div>
+                            <div class="form-floating">
+                                <select name="DoingInteriorsFor" id="DoingInteriorsFor" class="form-control select-css form-ico">
+                                    <option value="0" selected="">I am doing interiors for*</option>
+                                    <option value="New House">New House </option>
+                                    <option value="Renovation">Renovation </option>
+                                </select>
+
+                                <small id="spnDoingInteriorsFor" class="text-danger"></small>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" id="chkAccept" value="" checked="checked"> By submitting this form, you agree to the <a href="#">privacy policy</a> and <a href="#">terms of use</a>.
+                                <small id="spnAccept" class="text-danger d-block"></small>
+                            </label>
+                        </div><label id="ErrorMessage" class="alert alert-danger mx-auto mt-3"
+                                     style="display:none;margin-top : 15px"></label>
+                        <button type="button" id="send" name="send" class="btn btn-white">Consult Now</button>
+
+
+                    </form>
+                    <div id="Div_ThankYou" style="display:none">
+                        <h3>Thank You!</h3>
+                        <p class="text-green">Thank you. One of the executives from our team will get back to you soon.</p>
+                    </div>
+                    <!--<form id="consultForm" class="dark-form">
+                        <h4>Consult For Your Dream Home</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipi.</p>
+                        <div class="form-floating">
+                            <input type="text" maxlength="50" name="c" onchange="getValidationMessageName();" onkeydown="return isAlphabetKey(event, 'name')" id="txtexpName" class="form-control form-ico form-ico-01 undefined" required="" placeholder="Your Name">
+                            <label for="name">Name<span class="text-white">*</span></label>
+                            <small id="spnName" class="form-text text-danger"></small>
+                        </div>
+
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="txtexpEmail" placeholder="Enter email" name="txtexpEmail" maxlength="50" onchange="getValidationMessageEmail();" required="">
+                            <label for="email">Email ID<span class="text-white">*</span></label>
+                            <small id="spnEmail" class="text-danger"></small>
+                        </div>
+
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtexpPhone" placeholder="Mobile Number" name="txtexpPhone" maxlength="10" onchange="getValidationMessagePhone();" onkeydown="return isNumberKey(event,'number')" required="">
+                            <label for="number">Mobile Number<span class="text-white">*</span></label>
+                            <small id="spnMobileNumber" class="text-danger"></small>
+                        </div>
+
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtexpPinCode" placeholder="City Pincode" maxlength="6" name="txtexpPinCode" onchange="getValidationMessagePinCode();" onkeydown="return isNumberKeyy(event,'number')" required="">
+                            <label for="pincode">City Pincode<span class="text-white">*</span></label>
+                            <small id="spnPinCode" class="text-danger"></small>
+                        </div>
+
+                        <button type="button" id="send" name="send" class="btn btn-outline my-3">Request Now</button>
+                        <div class="form-check">
+                            <label class="form-check-label text-white">
+                                <input class="form-check-input" type="checkbox" id="chkAccept" value="" checked="checked"> By submitting this form, you agree to the <a href="#" class="text-white">privacy policy</a> and <a href="#" class="text-white">terms of use</a>.
+                                <small id="spnAccept" class="text-danger d-block"></small>
+                            </label>
+                        </div>
+                    </form>-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="consultFormModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Thank You!</h4>
+                    <button type="button" class="btn-close btnModalClose" onclick="CloseModal()"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Thank you. One of the executives from our team will get back to you soon.
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn-dark btnModalClose" onclick="CloseModal()">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- end of main container -->
+    <footer class="footer">
+        <div class="container">
+            <div class="d-grid">
+                <div class="left-section">
+                    <div class=" ">
+                        <ul class="footer-links">
+                            <li><a href="#">Sitemap</a></li>
+                            <li class="vertical-divider-line">|</li>
+                            <li><a href="#">Disclaimer</a></li>
+                            <li class="vertical-divider-line">|</li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li class="vertical-divider-line">|</li>
+                            <li><a href="#">*Terms &amp; Conditions</a></li>
+                            <li class="vertical-divider-line d-none d-lg-block">|</li>
+                        </ul>
+                        <div class="footer-text">
+                            ©
+                            <script>document.write(new Date().getFullYear())</script> Berger Paints India Limited - All Rights Reserved.<span class="vertical-divider-line">|</span><span class="copyright"> Website by <a href="http://www.hgsinteractive.com" title="HGS Interactive" target="_blank" rel="noopener">HGS Interactive</a></span>
+                        </div>
+                    </div>
+                    <!-- <ul>
+                      <li class="nav-item"><a href="#">Sitemap</a></li>
+                      <li class="vertical-divider-line">|</li>
+                      <li class="nav-item"><a href="#">Disclaimer</a></li>
+                      <li class="vertical-divider-line">|</li>
+                      <li class="nav-item"><a href="#">Privacy Policy</a></li>
+                      <li class="vertical-divider-line">|</li>
+                      <li class="nav-item"><a href="#">Terms & Conditions</a></li>
+                      <li class="vertical-divider-line">|</li>
+                      <li class="nav-item">&copy; 2023 Berger Paints India Limited - All Rights Reserved</li>
+                      <li class="nav-item"><a href="https://www.hgsinteractive.com/" target="_blank">Website by HGS Interactive</a></li>
+                    </ul> -->
+                </div>
+                <div class="right-section">
+                    <p>Connect With Us:</p>
+                    <ul>
+                        <li><a href="#"><img src="resources/images/facebook-icon.png"></a></li>
+                        <li><a href="#"><img src="resources/images/twitter-ico.png"></a></li>
+                        <li><a href="#"><img src="resources/images/youtube-icon.png"></a></li>
+                        <li><a href="#"><img src="resources/images/linkedin.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

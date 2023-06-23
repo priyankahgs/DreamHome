@@ -1,0 +1,165 @@
+﻿@{
+    Layout = "_Layout.cshtml";
+}
+<style>
+    .form-control.select-css.form-ico {
+        color: #fff
+    }
+
+    form label span  {
+        color: #fff
+    }
+
+    #more {
+        display: none;
+        margin-top: 0.5rem;
+    }
+
+    abbr {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .abbr-one-line {
+        display: initial;
+    }
+
+    .btn-dark:hover {
+        cursor: pointer;
+    }
+
+    .form-control.select-css.form-ico {
+        background: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        padding-left: 0rem !important;
+        border-bottom: 1px solid #bfbfbf;
+        padding: 0;
+        padding: 0.5rem 0rem 0rem !important;
+        font-weight: 500;
+        background: #32322e !important;
+        height: calc(2.5rem + 2px);
+    }
+
+        .form-control.select-css.form-ico:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+    .form-floating select option {
+        background: #32322e;
+    }
+</style>
+
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="mb-3">Get In Touch</h3>
+                <p>For more general enquires, use the form below to contcat our head office:</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dark-bg light-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 z-index-1 con-info">
+                <h4 class="pb-4">Contact Info</h4>
+                <p><strong>Berger Paints India Limited.</strong></p>
+                <ul class="list-unstyled p-0 m-0">
+                    <li><img src="resources/images/location-icon.png" class="img-fluid pe-2" alt="location">Berger House, 129 Park Street, Kolkata 700017</li>
+                    <li><img src="resources/images/call.png" class="img-fluid pe-2" alt="location">+91 33 2229 9724 / 2229 6005 / 06 / 1</li>
+                    <li><img src="resources/images/toll-free.png" class="img-fluid pe-2" alt="location">1800 103 6030</li>
+                    <li><img src="resources/images/sms.png" class="img-fluid pe-2" alt="location">SMS 'XP' to 56767</li>
+                    <li><img src="resources/images/email.png" class="img-fluid pe-2" alt="location"><a href="email:consumerfeedback@bergerindia.com">consumerfeedback@bergerindia.com</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 Style-home">
+                <form id="consultForm">
+                    <h4>Consult For Your Dream Home</h4>
+                    <div class="form-floating">
+                        <input type="text" maxlength="50" name="c" onchange="getValidationMessageName();" onkeydown="return isAlphabetKey(event, 'name')" id="txtexpName" class="form-control form-ico form-ico-01 undefined" required="" placeholder="Your Name">
+
+                        <label for="name">Name*</label>
+                        <small id="spnName" class="form-text text-danger"></small>
+                    </div>
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="txtexpEmail" placeholder="Enter email" name="txtexpEmail" maxlength="50" onchange="getValidationMessageEmail();" required="">
+                        <label for="email">Email ID*</label>
+                        <small id="spnEmail" class="text-danger"></small>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="txtexpPhone" placeholder="Mobile Number" name="txtexpPhone" maxlength="10" onchange="getValidationMessagePhone();" onkeydown="return isNumberKey(event,'number')" required="">
+                        <label for="number">Mobile Number*</label>
+                        <small id="spnMobileNumber" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="txtexpPinCode" placeholder="City Pincode" maxlength="6" name="txtexpPinCode" onchange="getValidationMessagePinCode();" onkeydown="return isNumberKeyy(event,'number')" required="">
+                        <label for="pincode">Site Pin Code*</label>
+                        <small id="spnPinCode" class="text-danger"></small>
+                    </div>
+                    <div class="form-floating">
+                        <select name="City" id="City" class="form-control select-css form-ico" onchange="CityChange()">
+                            <option value="0" selected="">City*</option>
+                            <option value="Bangalore">Bangalore </option>
+                            <option value="Others">Others </option>
+
+                        </select>
+
+                        <small id="spnCity" class="text-danger"></small>
+                    </div>
+                    <div id="Div_Bangalore" style="display:none">
+                        <div class="form-floating">
+                            <select name="PreferredLanguage" id="PreferredLanguage" class="form-control select-css form-ico">
+                                <option value="0" selected="">Preferred Language*</option>
+                                <option value="English">English </option>
+                                <option value="Hindi">Hindi </option>
+                                <option value="Kannada">Kannada </option>
+                            </select>
+
+                            <small id="spnPreferredLanguage" class="text-danger"></small>
+                        </div>
+                        <div class="form-floating">
+                            <select name="DoingUpFor" id="DoingUpFor" class="form-control select-css form-ico">
+                                <option value="0" selected="">I am doing up my*</option>
+                                <option value="Apartment">Apartment </option>
+                                <option value="Villa">Villa </option>
+                                <option value="Bungalow">Bungalow </option>
+                            </select>
+
+                            <small id="spnDoingUpFor" class="text-danger"></small>
+                        </div>
+                        <div class="form-floating">
+                            <select name="DoingInteriorsFor" id="DoingInteriorsFor" class="form-control select-css form-ico">
+                                <option value="0" selected="">I am doing interiors for*</option>
+                                <option value="New House">New House </option>
+                                <option value="Renovation">Renovation </option>
+                            </select>
+
+                            <small id="spnDoingInteriorsFor" class="text-danger"></small>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" id="chkAccept" value="" checked="checked"> By submitting this form, you agree to the <a href="#">privacy policy</a> and <a href="#">terms of use</a>.
+                            <small id="spnAccept" class="text-danger d-block"></small>
+                        </label>
+                    </div><label id="ErrorMessage" class="alert alert-danger mx-auto mt-3"
+                                 style="display:none;margin-top : 15px"></label>
+                    <button type="button" id="send" name="send" class="btn btn-white">Consult Now</button>
+
+
+                </form>
+                <div id="Div_ThankYou" style="display:none">
+                    <h3>Thank You!</h3>
+                    <p class="text-green">Thank you. One of the executives from our team will get back to you soon.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

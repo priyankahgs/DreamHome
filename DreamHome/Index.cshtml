@@ -1,0 +1,760 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Berger Dream Homes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/custom.css" rel="stylesheet">
+    <link rel="icon" href="resources/images/favicon.jpg">
+    <script src="resources/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="resources/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/slick-theme.css" />
+
+    <script type="text/javascript" src="resources/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="resources/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="resources/js/slick.js"></script>
+    <script type="text/javascript" src="resources/js/slick.min.js"></script>
+    <script src="resources/js/custom.js"></script>
+    <style>
+        #more, #more1 {
+            display: none;
+            margin-top: 0.5rem;
+        }
+
+        abbr {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .abbr-one-line {
+            display: initial;
+        }
+
+        .btn-dark:hover {
+            cursor: pointer;
+        }
+
+        .form-control.select-css.form-ico {
+            background: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+            padding-left: 0rem !important;
+            border-bottom: 1px solid #bfbfbf;
+            padding: 0;
+            padding: 0.5rem 0rem 0rem !important;
+            font-weight: 500;
+            height: calc(2.5rem + 2px);
+        }
+
+            .form-control.select-css.form-ico:focus {
+                outline: none;
+                box-shadow: none;
+            }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="resources/images/logo.png" alt="" title="" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                        <li class="nav-item"><a href="service.html" class="nav-link">Service</a></li>
+                        <li class="nav-item"><a href="ideas.html" class="nav-link">Ideas</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Request Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- banner -->
+        <div id="mainBanner" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainBanner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#mainBanner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#mainBanner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url(resources/images/mainbanner1.jpg) ;  ">
+                    <!-- <picture class="d-lg-none d-xl-none d-md-block">
+
+                      <img
+                        src="resources/images/mainbanner1.jpg"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </picture> -->
+                    <div class="container">
+                        <div class="d-grid">
+                            <div class="dark-content">
+                                <h2>Your Dream Home.<br /> Your Way. <br> Perfectly Crafted Interiors</h2>
+                                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+                                <a href="" class="btn-dark">I Want To Try</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url(resources/images/mainbanner2.jpg) ">
+                    <div class="container">
+                        <div class="d-grid">
+                            <div class="dark-content">
+                                <h2>Your Dream Home.<br /> Your Way. <br> Perfectly Crafted Interiors</h2>
+                                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+                                <a href="" class="btn-dark">I Want To Try</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="carousel-item" style="background-image: url(resources/images/mainbanner3.jpg) ">
+                  <div class="container">
+                    <div class="d-grid">
+                    <div class="dark-content">
+                      <h2>Your Dream Home<br/> Made Reality 2</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <a href="" class="btn-dark">I Want To Try</a>
+                    </div>
+
+                  </div>
+                  </div>
+                </div>     -->
+            </div>
+
+            <ul class="rightSticky">
+                <li>
+                    <a href="#">
+                        <img src="resources/images/whatsapp-icon.svg" class="img-fluid">
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#consultForm">
+                        <img src="resources/images/email-icon.svg" class="img-fluid">
+
+                    </a>
+                </li>
+            </ul>
+
+            <div class="container arrow-container">
+                <button class="carousel-control-prev" type="button" data-bs-target="#mainBanner" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#mainBanner" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+        <!-- end of banner -->
+    </header>
+    <!-- main container -->
+    <input type="hidden" id="hdnPageFlag" value="Home" />
+    <section class="about-us ">
+        <div class="container">
+            <div class="d-grid">
+                <div class="left-section generic-padding-top pe-0">
+                    <h3>About <br> Dream Homes</h3>
+                    <p><abbr class="abbr-one-line">We recognise that a home is more than just a physical space - it is where families flourish and precious memories are made.</abbr><span id="dots">...</span><span id="more"><abbr>This is why we create personalised homes that cater to your unique taste and lifestyle. Our design partners craft bespoke solution, avoiding a one-size-fits-all approach.</abbr><abbr>Our commitment to customer satisfaction guarantees a seamless journey with a dedicated point of contact. Let us use our expertise to get started on your dream home project!</abbr> </span></p>
+                    <a onclick="myFunction()" class="moreContent" id="myBtn">Learn more</a>
+                    <!-- <p>We recognise that a home is more than just a physical space - it is where families flourish and precious memories are made.</p><span id="dots">...</span> <span id="more">
+
+                    <p>This is why we create personalised homes that cater to your unique taste and lifestyle. Our design partners craft bespoke solution, avoiding a one-size-fits-all approach. </p>
+                    <p>Our commitment to customer satisfaction guarantees a seamless journey with a dedicated point of contact. Let us use our expertise to get started on your dream home project!</span></p>
+                    <button onclick="myFunction()" id="myBtn">Read more</button> -->
+
+
+                    <form id="consultForm">
+                        <h4>Consult For Your Dream Home</h4>
+                        <div class="form-floating">
+                            <input type="text" maxlength="50" name="c" onchange="getValidationMessageName();" onkeydown="return isAlphabetKey(event, 'name')" id="txtexpName" class="form-control form-ico form-ico-01 undefined" required="" placeholder="Your Name">
+
+                            <label for="name">Name<span>*</span></label>
+                            <small id="spnName" class="form-text text-danger"></small>
+                        </div>
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="txtexpEmail" placeholder="Enter email" name="txtexpEmail" maxlength="50" onchange="getValidationMessageEmail();" required="">
+                            <label for="email">Email ID<span>*</span></label>
+                            <small id="spnEmail" class="text-danger"></small>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtexpPhone" placeholder="Mobile Number" name="txtexpPhone" maxlength="10" onchange="getValidationMessagePhone();" onkeydown="return isNumberKey(event,'number')" required="">
+                            <label for="number">Mobile Number<span>*</span></label>
+                            <small id="spnMobileNumber" class="text-danger"></small>
+                        </div>
+
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="txtexpPinCode" placeholder="City Pincode" maxlength="6" name="txtexpPinCode" onchange="getValidationMessagePinCode();" onkeydown="return isNumberKeyy(event,'number')" required="">
+                            <label for="pincode">Site Pin Code<span>*</span></label>
+                            <small id="spnPinCode" class="text-danger"></small>
+                        </div>
+                        <div class="form-floating">
+                            <select name="City" id="City" class="form-control select-css form-ico" onchange="CityChange()">
+                                <option value="0" selected="">City*</option>
+                                <option value="Bangalore">Bangalore </option>
+                                <option value="Others">Others </option>
+
+                            </select>
+
+                            <small id="spnCity" class="text-danger"></small>
+                        </div>
+                        <div id="Div_Others" style="display:none">
+                            <div class="form-floating">
+                                <p>We are currently offering DREAM HOME service in Bangalore. We will get in touch with you when we start the service in your city. Thank you.</p>
+                            </div>
+                        </div>
+                        <div id="Div_Bangalore" style="display:none">
+                            <div class="form-floating">
+                                <select name="PreferredLanguage" id="PreferredLanguage" class="form-control select-css form-ico">
+                                    <option value="0" selected="">Preferred Language*</option>
+                                    <option value="English">English </option>
+                                    <option value="Hindi">Hindi </option>
+                                    <option value="Kannada">Kannada </option>
+                                </select>
+
+                                <small id="spnPreferredLanguage" class="text-danger"></small>
+                            </div>
+                            <div class="form-floating">
+                                <select name="DoingUpFor" id="DoingUpFor" class="form-control select-css form-ico">
+                                    <option value="0" selected="">I am doing up my*</option>
+                                    <option value="Apartment">Apartment </option>
+                                    <option value="Villa">Villa </option>
+                                    <option value="Bungalow">Bungalow </option>
+                                </select>
+
+                                <small id="spnDoingUpFor" class="text-danger"></small>
+                            </div>
+                            <div class="form-floating">
+                                <select name="DoingInteriorsFor" id="DoingInteriorsFor" class="form-control select-css form-ico">
+                                    <option value="0" selected="">I am doing interiors for*</option>
+                                    <option value="New House">New House </option>
+                                    <option value="Renovation">Renovation </option>
+                                </select>
+
+                                <small id="spnDoingInteriorsFor" class="text-danger"></small>
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" id="chkAccept" value="" checked="checked"> By submitting this form, you agree to the <a href="#">privacy policy</a> and <a href="#">terms of use</a>.
+                                <small id="spnAccept" class="text-danger d-block"></small>
+                            </label>
+                        </div><label id="ErrorMessage" class="alert alert-danger mx-auto mt-3"
+                                     style="display:none;margin-top : 15px"></label>
+                        <button type="button" id="send" name="send" class="btn btn-white">Consult Now</button>
+
+
+                    </form>
+                    <div id="Div_ThankYou" style="display:none">
+                        <h3>Thank You!</h3>
+                        <p class="text-green">Thank you. One of the executives from our team will get back to you soon.</p>
+                    </div>
+                    <!-- <button type="button" class="btn btn-primary" onclick="toggleModal1()">
+                      Open modal
+                    </button> -->
+
+
+                </div>
+                <div class="right-section">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reasons generic-margin">
+        <div class="container">
+            <h3>From Drab to Fab: Let Our Interior Design <br /> Partners Work Their Magic!</h3>
+            <div class="d-grid">
+                <div class="left-section">
+                    <p>Backed By A Century Of Trust</p>
+                    <p>
+                        <abbr class="abbr-one-line">Dream Homes is backed by the rich legacy of Berger Paints India. From  consultation to final touches and everything in between, we take care of everything.</abbr><span id="dots1">...</span><span id="more1">
+                            <abbr>We bring your dream home to life with innovative design techniques and the highest-quality materials. Our design partners work closely with you to create inspiring mood boards for interior decor that guide the process and maintain clear and transparent communication.</abbr><abbr>
+                                We understand so much goes behind the making of a stunning home and our experts are well trained in providing everything that is needed for your dream home, from plumbing and tiling solutions, electrical and lighting services, woodwork, civil work, waterproofing and painting.
+                            </abbr>
+                        </span>
+                    </p>
+                    <a onclick="myFunction1()" class="moreContent" id="myBtn1">Learn more</a>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <span class="number">25 per city</span>
+                            <span class="text">Design Partners</span>
+                        </li>
+                        <li>
+                            <span class="number">Bangalore</span>
+                            <span class="text">Cities Covered</span>
+                        </li>
+                        <li>
+                            <span class="number">600+</span>
+                            <span class="text">Home Styled</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="reasonSlider" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="d-grid">
+                            <div class="left-section" style="background-image: url(resources/images/innovation-space.jpg);">
+                                <picture class="d-lg-none d-xl-none d-md-block">
+                                    <source media="(min-width:991px)"
+                                            srcset="resources/images/innovation-space.jpg"
+                                            class="img-fluid" />
+                                    <img src="resources/images/innovation-space.jpg"
+                                         alt=""
+                                         class="img-fluid" />
+                                </picture>
+                            </div>
+                            <!-- <img src="resources/images/innovation-space.jpg" class="d-block w-100"  > -->
+                            <div class="dark-content">
+                                <h3>Innovative <br />Space Saving Solutions</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                                <a href="" class="btn-dark">Explore</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-grid">
+                            <div class="left-section" style="background-image: url(resources/images/innovation-space1.jpg);">
+                                <picture class="d-lg-none d-xl-none d-md-block">
+                                    <source media="(min-width:991px)"
+                                            srcset="resources/images/innovation-space1.jpg"
+                                            class="img-fluid" />
+                                    <img src="resources/images/innovation-space1.jpg"
+                                         alt=""
+                                         class="img-fluid" />
+                                </picture>
+                            </div>
+                            <div class="dark-content">
+                                <h3>Innovative <br />Space Saving Solutions</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                                <a href="" class="btn-dark">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#reasonSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#reasonSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="steps generic-margin">
+        <div class="container">
+            <div class="intro-para w-75 mx-auto">
+                <h3 class="text-center mb-3">Your Dream Space, Our Ideas: The Dream Partnership!</h3>
+                <p class="text-center">Simple steps to create the dream home you’ve always wanted.</p>
+            </div>
+
+            <div id="stepsSlider" class="carousel slide" data-bs-ride="carousel" data-interval="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><span class="number">1</span> <span>Get Started</span></button>
+                    <hr class="divider">
+                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="1" aria-label="Slide 2"><span class="number">2</span> <span>Meet Our Design Partners</span></button>
+                    <hr class="divider">
+                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="2" aria-label="Slide 3"><span class="number">3</span> <span>From Vision to Visualisation</span></button>
+                    <hr class="divider">
+                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="3" aria-label="Slide 4"><span class="number">4</span> <span>Let The Magic Begin</span></button>
+                    <hr class="divider">
+                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="4" aria-label="Slide 5"><span class="number">5</span> <span>Your Dream <br />Home Awaits</span></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-grid">
+                            <div>
+                                <img src="resources/images/steps.png" class="img-fluid" />
+                            </div>
+                            <div>
+                                <h3>Get Started</h3>
+                                <p>
+                                    Contact us to schedule a visit from a Berger Executive, who will be a part of this exciting journey to bring your dream home to life.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item  ">
+                        <div class="d-grid">
+                            <div>
+                                <img src="resources/images/steps.png" class="img-fluid" />
+                            </div>
+                            <div>
+                                <h3>Meet Our Design Partners</h3>
+                                <p>Ready to make your dream home a reality? Meet our exceptional design partners and connect with them virtually from anywhere. Let's create your perfect home together!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item  ">
+                        <div class="d-grid">
+                            <div>
+                                <img src="resources/images/steps.png" class="img-fluid" />
+                            </div>
+                            <div>
+                                <h3>From Vision to Visualisation</h3>
+                                <p>We partner with expert design partners to turn your vision into reality with a detailed 3D model and carefully chosen materials. Our team handles every stage of the process of home styling, so you can sit back and enjoy your new beautiful abode.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item  ">
+                        <div class="d-grid">
+                            <div>
+                                <img src="resources/images/steps.png" class="img-fluid" />
+                            </div>
+                            <div>
+                                <h3>Let The Magic Begin</h3>
+                                <p>With all the materials and work schedule in place, it's now time to start counting down the days until your dream home comes to life. Get ready to enjoy the comfort and beauty of your dream home!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item  ">
+                        <div class="d-grid">
+                            <div>
+                                <img src="resources/images/steps.png" class="img-fluid" />
+                            </div>
+                            <div>
+                                <h3>Your Dream Home Awaits</h3>
+                                <p>Trust us to keep you in the loop with regular progress updates, ensuring that you are fully aware of what's happening every step of the way. When the time comes for the site handover, you can rest assured that we will handle it with the utmost care. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#stepsSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#stepsSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="design generic-margin">
+
+        <div class="container-fluid pe-0">
+            <div class=" d-flex justify-content-end content">
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-12">
+                    <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12 col-12">
+                        <h2>Our Inspiring Room  <br> Designs</h2>
+                        <p>
+                            Derive inspiration from our gallery for every room, corner and wall of your home!
+                        </p>
+                    </div>
+                    <div class="designSlider">
+                        <div class="item">
+                            <img src="resources/images/design1.jpg" class="img-fluid" />
+                            <h4>Living Room</h4>
+                            <p>Build a wonderful paradise where you can relax in style.</p>
+                        </div>
+                        <div class="item">
+                            <img src="resources/images/design2.jpg" class="img-fluid" />
+                            <h4>Dining Room</h4>
+                            <p>Create a space that is a feast for the eyes.</p>
+                        </div>
+                        <div class="item">
+                            <img src="resources/images/design1.jpg" class="img-fluid" />
+                            <h4>Bedroom </h4>
+                            <p>Design your own dreamscape that is a personal oasis of calm and tranquility.</p>
+                        </div>
+                        <div class="item">
+                            <img src="resources/images/design2.jpg" class="img-fluid" />
+                            <h4>Living Room</h4>
+                            <p>Build a wonderful paradise where you can relax in style.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="testimonials generic-margin">
+        <div class="container">
+            <h3 class="text-center mb-3">Transformative Home Design: Hear From Our Happy Customers!</h3>
+            <p class="text-center">Get inspired by stories of our ecstatic customers and see how we're changing lives one home at a time.</p>
+
+
+            <div class="testimonial">
+                <div class="item">
+                    <div class="d-grid">
+                        <div class="left-section">
+                            <img src="resources/images/testimonail1.jpg" class="img-fluid" />
+                        </div>
+                        <div class="right-section">
+                            <h4>"Such a seamless process!"</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled  </p>
+                            <small>By Suresh Jadhav - Mumbai</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="d-grid">
+                        <div class="left-section">
+                            <img src="resources/images/testimonail2.jpg" class="img-fluid" />
+                        </div>
+                        <div class="right-section">
+                            <h4>"Such a seamless process!"</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                            <small>By Suresh Jadhav - Mumbai</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="d-grid">
+                        <div class="left-section">
+                            <img src="resources/images/testimonail1.jpg" class="img-fluid" />
+                        </div>
+                        <div class="right-section">
+                            <h4>"Such a seamless process!"</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                            <small>By Suresh Jadhav - Mumbai</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <section class="faq generic-margin">
+        <div class="container">
+            <h3 class="mb-3">Frequently Asked Questions</h3>
+
+            <div class="accordion" id="myAccordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingOne">
+                        <button type="button" class="accordion-button  " data-bs-toggle="collapse" data-bs-target="#collapseOne">What is Berger Dream Homes service?</button>
+                    </h3>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#myAccordion">
+                        <div class="card-body">
+                            <p>In collaboration with experienced design partners, we offer customised interior design services for your home interiors that cater to your specific preferences. These designs are not pre-made. They are tailored to your taste. You can trust the quality of materials, finish and adherence to timelines. We will oversee the project to ensure that it is executed correctly.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingTwo">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Is it necessary for me to be present in town and make regular visits to the site?</button>
+                    </h3>
+                    <div id="collapseTwo" class="accordion-collapse collapse " data-bs-parent="#myAccordion">
+                        <div class="card-body">
+                            <p>Our skilled supervisors keep you informed of the progress on-site every step of the way.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingThree">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">Do I need to procure the necessary raw materials?</button>
+                    </h3>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                        <div class="card-body">
+                            <p>
+                                After the design stage, we make sure to select appropriate materials and then ensure the timely procurement of genuine materials.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingFour">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            What services do you offer?
+                        </button>
+                    </h3>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                        <div class="card-body">
+                            <p>
+                                We provide comprehensive interior design services, which include woodwork, fixed furniture, ceiling & lighting solutions, civil changes, waterproofing and painting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingFive">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive">Who should I reach out to throughout the duration of the project?</button>
+                    </h3>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                        <div class="card-body">
+                            <p>Your designated point of contact for the duration of the project, from initial visit until completion, will be the executive. He/she will be responsible for coordinating with all relevant agencies and addressing any enquiries you may have. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingSix">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSix">What is the typical duration for home styling?</button>
+                    </h3>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                        <div class="card-body">
+                            <p>
+                                The duration required for home styling can vary based on the nature of the project, whether it involves renovating an existing home or working on a new one. Rest assured, our professionals are equipped with advanced tools and work efficiently so that we can deliver the finished site in a reasonable amount of time!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="about-berger-paints">
+        <div class="container">
+            <div class="d-grid">
+                <div class="left-section">
+                    <!-- <img src="resources/images/about-berger-paint.jpg" class="img-fluid" /> -->
+                    <picture class="d-lg-none d-xl-none d-md-block">
+                        <source media="(min-width:576px)"
+                                srcset="resources/images/about-berger-paint.jpg"
+                                class="img-fluid" />
+                        <img src="resources/images/about-berger-paint.jpg"
+                             alt=""
+                             class="img-fluid" />
+                    </picture>
+                </div>
+                <div class="right-section">
+                    <div class="dark-content">
+                        <h3>About Berger Paints India</h3>
+                        <p>Berger Paints India is headquartered in Kolkata, with 16 strategically located manufacturing units across India (including the subsidiaries), 2 in Nepal, 1 each in Poland and Russia and about 162 stock points. The company also has an international presence in 4 countries (Nepal, Bangladesh, Poland and Russia). Berger is acclaimed as a game changer in the sector with a vibrant portfolio of paints and tailor-made customer services in every paint segment.</p>
+                        <a href="" class="btn-dark">Learn More</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end of main container -->
+    <footer class="footer">
+        <div class="container">
+            <div class="d-grid">
+                <div class="left-section">
+                    <div class=" ">
+                        <ul class="footer-links">
+                            <li><a href="#">Sitemap</a></li>
+                            <li class="vertical-divider-line">|</li>
+                            <li><a href="#">Disclaimer</a></li>
+                            <li class="vertical-divider-line">|</li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li class="vertical-divider-line">|</li>
+                            <li><a href="#">*Terms &amp; Conditions</a></li>
+                            <li class="vertical-divider-line d-none d-lg-block">|</li>
+                        </ul>
+                        <div class="footer-text">
+                            ©
+                            <script>document.write(new Date().getFullYear())</script> Berger Paints India Limited - All Rights Reserved.<span class="vertical-divider-line">|</span><span class="copyright"> Website by <a href="http://www.hgsinteractive.com" title="HGS Interactive" target="_blank" rel="noopener">HGS Interactive</a></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right-section">
+                    <p>Connect with us :</p>
+                    <ul>
+                        <li><a href="#"><img src="resources/images/facebook-icon.png"></a></li>
+                        <li><a href="#"><img src="resources/images/twitter-ico.png"></a></li>
+                        <li><a href="#"><img src="resources/images/youtube-icon.png"></a></li>
+                        <li><a href="#"><img src="resources/images/linkedin.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- The Modal -->
+    <div class="modal" id="consultFormModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Thank You!</h4>
+                    <button type="button" class="btn-close btnModalClose" onclick="CloseModal()"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Thank you. One of the executives from our team will get back to you soon.
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn-dark btnModalClose" onclick="CloseModal()">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Learn more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Learn less";
+                moreText.style.display = "block";
+            }
+        }
+
+
+        function myFunction1() {
+            var dots1 = document.getElementById("dots1");
+            var moreText1 = document.getElementById("more1");
+            var btnText1 = document.getElementById("myBtn1");
+
+            if (dots1.style.display === "none") {
+                dots1.style.display = "inline";
+                btnText1.innerHTML = "Learn more";
+                moreText1.style.display = "none";
+            } else {
+                dots1.style.display = "none";
+                btnText1.innerHTML = "Learn less";
+                moreText1.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

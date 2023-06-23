@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Berger Dream Homes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="resources/images/favicon.jpg">
+    <meta name="description" content="Berger Dream Homes">
+    <meta name="keywords" content="Berger Dream Homes">
+    <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="resources/css/custom.css"> -->
+    <link rel="stylesheet" type="text/css" href="resources/css/service.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/slick-theme.css" />
+    <script type="text/javascript" src="resources/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="resources/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="resources/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="resources/js/slick.js"></script>
+    <script type="text/javascript" src="resources/js/slick.min.js"></script>
+    <script type="text/javascript" src="resources/js/custom.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="resources/images/logo.png" alt="" title="" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
+                        <li class="nav-item"><a href="service.html" class="nav-link active hover-underline-animation">Service</a></li>
+                        <li class="nav-item"><a href="ideas.html" class="nav-link">Ideas</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Request Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="Style-home dark-bg">
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="container bg-image px-3">
+                            <div class="row">
+                                <div class="col-lg-8 col-sm-6 z-index-1 py-5">
+                                    <h2>Style Your Home<br class="d-lg-block d-none"> With Us</h2>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 text-white dark-bg p-5 z-index-1">
+                                    <form id="consultForm" class="dark-form">
+                                        <h4>Consult For Your Dream Home</h4>
+                                        <div class="form-floating">
+                                            <input type="text" maxlength="50" name="c" onchange="getValidationMessageName();" onkeydown="return isAlphabetKey(event, 'name')" id="txtexpName" class="form-control form-ico form-ico-01 undefined" required="" placeholder="Your Name">
+
+                                            <label for="name">Name<span>*</span></label>
+                                            <small id="spnName" class="form-text text-danger"></small>
+                                        </div>
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="txtexpEmail" placeholder="Enter email" name="txtexpEmail" maxlength="50" onchange="getValidationMessageEmail();" required="">
+                                            <label for="email">Email ID<span>*</span></label>
+                                            <small id="spnEmail" class="text-danger"></small>
+                                        </div>
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="txtexpPhone" placeholder="Mobile Number" name="txtexpPhone" maxlength="10" onchange="getValidationMessagePhone();" onkeydown="return isNumberKey(event,'number')" required="">
+                                            <label for="number">Mobile Number<span>*</span></label>
+                                            <small id="spnMobileNumber" class="text-danger"></small>
+                                        </div>
+
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="txtexpPinCode" placeholder="City Pincode" maxlength="6" name="txtexpPinCode" onchange="getValidationMessagePinCode();" onkeydown="return isNumberKeyy(event,'number')" required="">
+                                            <label for="pincode">Site Pin Code<span>*</span></label>
+                                            <small id="spnPinCode" class="text-danger"></small>
+                                        </div>
+                                        <div class="form-floating">
+                                            <select name="City" id="City" class="form-control select-css form-ico" onchange="CityChange()">
+                                                <option value="0" selected="">City*</option>
+                                                <option value="Bangalore">Bangalore </option>
+                                                <option value="Others">Others </option>
+
+                                            </select>
+
+                                            <small id="spnCity" class="text-danger"></small>
+                                        </div>
+                                        <div id="Div_Others" style="display:none">
+                                            <div class="form-floating">
+                                                <p style="color:white">We are currently offering DREAM HOME service in Bangalore. We will get in touch with you when we start the service in your city. Thank you.</p>
+                                            </div>
+                                        </div>
+                                        <div id="Div_Bangalore" style="display:none">
+                                            <div class="form-floating">
+                                                <select name="PreferredLanguage" id="PreferredLanguage" class="form-control select-css form-ico">
+                                                    <option value="0" selected="">Preferred Language*</option>
+                                                    <option value="English">English </option>
+                                                    <option value="Hindi">Hindi </option>
+                                                    <option value="Kannada">Kannada </option>
+                                                </select>
+
+                                                <small id="spnPreferredLanguage" class="text-danger"></small>
+                                            </div>
+                                            <div class="form-floating">
+                                                <select name="DoingUpFor" id="DoingUpFor" class="form-control select-css form-ico">
+                                                    <option value="0" selected="">I am doing up my*</option>
+                                                    <option value="Apartment">Apartment </option>
+                                                    <option value="Villa">Villa </option>
+                                                    <option value="Bungalow">Bungalow </option>
+                                                </select>
+
+                                                <small id="spnDoingUpFor" class="text-danger"></small>
+                                            </div>
+                                            <div class="form-floating">
+                                                <select name="DoingInteriorsFor" id="DoingInteriorsFor" class="form-control select-css form-ico">
+                                                    <option value="0" selected="">I am doing interiors for*</option>
+                                                    <option value="New House">New House </option>
+                                                    <option value="Renovation">Renovation </option>
+                                                </select>
+
+                                                <small id="spnDoingInteriorsFor" class="text-danger"></small>
+                                            </div>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" id="chkAccept" value="" checked="checked"> By submitting this form, you agree to the <a href="#">privacy policy</a> and <a href="#">terms of use</a>.
+                                                <small id="spnAccept" class="text-danger d-block"></small>
+                                            </label>
+                                        </div><label id="ErrorMessage" class="alert alert-danger mx-auto mt-3"
+                                                     style="display:none;margin-top : 15px"></label>
+                                        <button type="button" id="send" name="send" class="btn btn-white">Consult Now</button>
+
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <ul class="rightSticky">
+            <li>
+                <a href="#"><img src="resources/images/whatsapp-icon.svg" class="img-fluid"></a>
+            </li>
+            <li>
+                <a href="#consultForm"><img src="resources/images/email-icon.svg" class="img-fluid"></a>
+            </li>
+        </ul>
+    </header>
+
+    <style>
+        .form-control.select-css.form-ico {
+            color: #fff
+        }
+
+        form label span {
+            color: #fff
+        }
+
+        #more {
+            display: none;
+            margin-top: 0.5rem;
+        }
+
+        abbr {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .abbr-one-line {
+            display: initial;
+        }
+
+        .btn-dark:hover {
+            cursor: pointer;
+        }
+
+        .form-control.select-css.form-ico {
+            background: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+            padding-left: 0rem !important;
+            border-bottom: 1px solid #bfbfbf;
+            padding: 0;
+            padding: 0.5rem 0rem 0rem !important;
+            font-weight: 500;
+            background: #32322e !important;
+            height: calc(2.5rem + 2px);
+        }
+
+            .form-control.select-css.form-ico:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+        .form-floating select option {
+            background: #32322e;
+        }
+    </style>
+    <!-- main container -->
+    <section class="about-us py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 left-pad">
+                    <h3>
+                        Your Wish For Home Interiors,<br class="d-lg-block d-none">
+                        Our Design Services!
+                    </h3>
+                </div>
+                <div class="col-lg-7 left-pad">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.  amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.  dolore magna aliqua. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="design dark-bg-slider">
+        <div class="container-fluid">
+            <div class="row d-flex">
+                <div class="col-lg-4 dark-bg align-self-center">
+                    <div class="w-border left-side py-3">
+                        <h3 class="text-white">
+                            Full <br>
+                            Home Interiors
+                        </h3>
+                        <p class="text-white">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                        </p>
+                        <button type="button" class="btn btn-outline my-3">Book This For Me</button>
+                    </div>
+                </div>
+                <div class="col-lg-8 p-0">
+                    <div class="serviceHomeSlider">
+                        <div class="item">
+                            <img src="resources/images/home-interiors-1.jpg" class="img-fluid" />
+                        </div>
+                        <div class="item">
+                            <img src="resources/images/home-interiors-2.jpg" class="img-fluid" />
+                        </div>
+                        <div class="item">
+                            <img src="resources/images/home-interiors-1.jpg" class="img-fluid" />
+                        </div>
+                        <div class="item">
+                            <img src="resources/images/home-interiors-2.jpg" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1 text-center pb-5">
+                    <h3>Service That Is Crafted With Detailings</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.  amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 pb-3 pb-lg-0">
+                    <img src="resources/images/img2.jpg" class="img-fluid" />
+                </div>
+                <div class="col-sm-6 position-relative">
+                    <div class="points">
+                        <ul class="row">
+                            <li class="col-sm-6">
+                                <p>Wood Work, Cupboards, Storage Units etc.</p>
+                            </li>
+                            <li class="col-sm-6">
+                                <p>Electrical and Lighting Solutions</p>
+                            </li>
+                            <li class="col-sm-6">
+                                <p>Tiling and Plumbing Solutions</p>
+                            </li>
+                            <li class="col-sm-6">
+                                <p>Civil Work as required by the Design</p>
+                            </li>
+                            <li class="col-sm-6">
+                                <p>Ceiling Solutions</p>
+                            </li>
+                            <li class="col-sm-6">
+                                <p>Waterproofing and Painting</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-btn">
+                        <a href="javascript:;" class="btn btn-service">Avail The Service Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="steps generic-margin">
+        <div class="container">
+            <div class="intro-para w-75 mx-auto">
+                <h3 class="text-center mb-3">Simple Steps To Your Dream Home</h3>
+                <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+
+            <div id="stepsSlider" class="carousel slide" data-bs-ride="carousel" data-interval="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><span class="number">1</span> <span>Book An Appointment</span></button>
+                    <hr class="divider">
+                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="1" aria-label="Slide 2"><span class="number">2</span> <span>Book our designers</span></button>
+                    <hr class="divider">
+                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="2" aria-label="Slide 3"><span class="number">3</span> <span>Personalise Your Design</span></button>
+                    <hr class="divider">
+                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="3" aria-label="Slide 4"><span class="number">4</span> <span>Production Initiation</span></button>
+                    <hr class="divider">
+                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="4" aria-label="Slide 5"><span class="number">5</span> <span>Move <br />In</span></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-grid">
+                            <div>
+                                <img src="resources/images/steps.png" class="img-fluid" />
+                            </div>
+                            <div>
+                                <h3>Book An Appointment</h3>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-grid">
+                            <div>
+                                <img src="resources/images/steps.png" class="img-fluid" />
+                            </div>
+                            <div>
+                                <h3>Book Our Designers</h3>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-grid">
+                            <div>
+                                <img src="resources/images/steps.png" class="img-fluid" />
+                            </div>
+                            <div>
+                                <h3>Personalise Your Design</h3>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-grid">
+                            <div>
+                                <img src="resources/images/steps.png" class="img-fluid" />
+                            </div>
+                            <div>
+                                <h3>Production Initiation</h3>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-grid">
+                            <div>
+                                <img src="resources/images/steps.png" class="img-fluid" />
+                            </div>
+                            <div>
+                                <h3>Move In</h3>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#stepsSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#stepsSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="dark-bg bg-d-partners">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-md-6 align-self-center">
+                    <div class="py-3 my-3 py-lg-5 my-lg-5 pe-lg-5 text-white">
+                        <h2 class="pb-3">Our Design Partners</h2>
+                        <p class="text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos</p>
+                    </div>
+                </div>
+                <div class="col-md-6 img-height px-0">
+                    <img src="resources/images/design-partners-right.jpg" class="d-block d-md-none img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="py-3 text-center">Many Reasons Why You Should Choose Us</h3>
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-center" style="border-top: transparent;">
+                            <tr>
+                                <th width="25%" style="border: 0;">&nbsp;</th>
+                                <th width="40%" style="background: #efe8e0; border-top: 1px #bababa; solid; border-right: 1px #bababa4a; solid !important;" class="p-3 border-end">Choosing Berger Dream Home</th>
+                                <th width="35%" style="background: #efe8e0; border-top: 1px #bababa; solid" class="p-3">Choosing Other Interior Services</th>
+                            </tr>
+                            <tr>
+                                <td width="25%" align="center" class="td-dark p-3">Price</td>
+                                <td width="40%" class="p-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolores eos</td>
+                                <td width="35%" class="p-3">Natus error sit voluptatem accusantium doloremque dolores eos</td>
+                            </tr>
+                            <tr>
+                                <td width="25%" align="center" class="td-dark p-3">The Process</td>
+                                <td width="40%" class="py-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolores eos</td>
+                                <td width="35%" class="py-3">Natus error sit voluptatem accusantium doloremque dolores eos</td>
+                            </tr>
+                            <tr>
+                                <td width="25%" align="center" class="td-dark p-3">The Process</td>
+                                <td width="40%" class="py-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolores eos</td>
+                                <td width="35%" class="py-3">Natus error sit voluptatem accusantium doloremque dolores eos</td>
+                            </tr>
+                            <tr>
+                                <td width="25%" align="center" class="td-dark p-3">Quality</td>
+                                <td width="40%" class="py-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolores eos</td>
+                                <td width="35%" class="py-3">Natus error sit voluptatem accusantium doloremque dolores eos</td>
+                            </tr>
+                            <tr>
+                                <td width="25%" align="center" class="td-dark p-3">Warranty</td>
+                                <td width="40%" class="py-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolores eos</td>
+                                <td width="35%" class="py-3">Natus error sit voluptatem accusantium doloremque dolores eos</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="design generic-margin right-bg-color">
+        <div class="container-fluid pe-0">
+            <div class=" d-flex justify-content-end content">
+                <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12 col-12">
+                    <div class="col-lg-7 col-md-9 col-sm-12 col-xs-12 col-12 pb-5">
+                        <h3>Home Transformation, Some Inspiration For You</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices  </p>
+                    </div>
+                    <div class="serviceDesignSlider">
+                        <div class="item">
+                            <img src="resources/images/slide-1.jpg" class="img-fluid" />
+                            <h4>Are you inspired? If yes, then book an appointment for your Dream Home with<br class="d-none d-lg-block d-xl-none"> our experts today!</h4>
+                        </div>
+                        <div class="item">
+                            <img src="resources/images/slide-2.jpg" class="img-fluid" />
+                            <!-- <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4> -->
+                        </div>
+                        <div class="item">
+                            <img src="resources/images/slide-1.jpg" class="img-fluid" />
+                            <h4>Are you inspired? If yes, then book an appointment for your Dream Home with<br class="d-none d-lg-block d-xl-none"> our experts today!</h4>
+                        </div>
+                        <div class="item">
+                            <img src="resources/images/slide-2.jpg" class="img-fluid" />
+                            <!-- <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4> -->
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="btn btn-service">Get in Touch with experts</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials generic-margin">
+        <div class="container">
+            <h3 class="text-center mb-3">Happy Clients</h3>
+            <p class="text-center">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form </p>
+            <div class="testimonial">
+                <div class="item">
+                    <div class="d-grid">
+                        <div class="left-section">
+                            <img src="resources/images/testimonail1.jpg" class="img-fluid" />
+                        </div>
+                        <div class="right-section">
+                            <h4>"Such a seamless process!"</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled  </p>
+                            <small>By Suresh Jadhav - Mumbai</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="d-grid">
+                        <div class="left-section">
+                            <img src="resources/images/testimonail2.jpg" class="img-fluid" />
+                        </div>
+                        <div class="right-section">
+                            <h4>"Such a seamless process!"</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                            <small>By Suresh Jadhav - Mumbai</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="d-grid">
+                        <div class="left-section">
+                            <img src="resources/images/testimonail1.jpg" class="img-fluid" />
+                        </div>
+                        <div class="right-section">
+                            <h4>"Such a seamless process!"</h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                            <small>By Suresh Jadhav - Mumbai</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq generic-margin">
+        <div class="container">
+            <h3 class="mb-3">Frequently Asked Questions</h3>
+            <div class="accordion" id="myAccordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingOne">
+                        <button type="button" class="accordion-button  " data-bs-toggle="collapse" data-bs-target="#collapseOne">What is Berger Dream Homes service?</button>
+                    </h3>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#myAccordion">
+                        <div class="card-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingTwo">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Is only new home projects undertaken or is renovation also undertaken?</button>
+                    </h3>
+                    <div id="collapseTwo" class="accordion-collapse collapse " data-bs-parent="#myAccordion">
+                        <div class="card-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingThree">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">Do I need to be in town and visit site regularly?</button>
+                    </h3>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                        <div class="card-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingFour">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour">Do I have to procure the raw materials needed?</button>
+                    </h3>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                        <div class="card-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingFive">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive">What services do you offer?</button>
+                    </h3>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                        <div class="card-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingSix">
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSix">Who all should I contact during the course of the project?</button>
+                    </h3>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                        <div class="card-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="modal" id="consultFormModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Thank You!</h4>
+                    <button type="button" class="btn-close btnModalClose" onclick="CloseModal()"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Thank you. One of the executives from our team will get back to you soon.
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn-dark btnModalClose" onclick="CloseModal()">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- end of main container -->
+    <footer class="footer">
+        <div class="container">
+            <div class="d-grid">
+                <div class="left-section">
+                    <div class=" ">
+                        <ul class="footer-links">
+                            <li><a href="/sitemap.html">Sitemap</a></li>
+                            <li class="vertical-divider-line">|</li>
+                            <li><a href="/disclaimer.html">Disclaimer</a></li>
+                            <li class="vertical-divider-line">|</li>
+                            <li><a href="/about-us/privacy-policy.html">Privacy Policy</a></li>
+                            <li class="vertical-divider-line">|</li>
+                            <li><a href="/terms-and-conditions.html">*Terms &amp; Conditions</a></li>
+                            <li class="vertical-divider-line d-none d-lg-block">|</li>
+                        </ul>
+                        <div class="footer-text">
+                            ©
+                            <script>document.write(new Date().getFullYear())</script> Berger Paints India Limited - All Rights Reserved.<span class="vertical-divider-line">|</span><span class="copyright"> Website by <a href="http://www.hgsinteractive.com" title="HGS Interactive" target="_blank" rel="noopener">HGS Interactive</a></span>
+                        </div>
+                    </div>
+                    <!-- <ul>
+                      <li class="nav-item"><a href="#">Sitemap</a></li>
+                      <li class="vertical-divider-line">|</li>
+                      <li class="nav-item"><a href="#">Disclaimer</a></li>
+                      <li class="vertical-divider-line">|</li>
+                      <li class="nav-item"><a href="#">Privacy Policy</a></li>
+                      <li class="vertical-divider-line">|</li>
+                      <li class="nav-item"><a href="#">Terms & Conditions</a></li>
+                      <li class="vertical-divider-line">|</li>
+                      <li class="nav-item">&copy; 2023 Berger Paints India Limited - All Rights Reserved</li>
+                      <li class="nav-item"><a href="https://www.hgsinteractive.com/" target="_blank">Website by HGS Interactive</a></li>
+                    </ul> -->
+                </div>
+                <div class="right-section">
+                    <p>Connect With Us:</p>
+                    <ul>
+                        <li><a href="#"><img src="resources/images/facebook-icon.png"></a></li>
+                        <li><a href="#"><img src="resources/images/twitter-ico.png"></a></li>
+                        <li><a href="#"><img src="resources/images/youtube-icon.png"></a></li>
+                        <li><a href="#"><img src="resources/images/linkedin.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <input type="hidden" id="hdnPageFlag" value="Service" />
+
+</body>
+</html>
+
+
