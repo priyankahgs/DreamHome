@@ -12,7 +12,7 @@ namespace DreamHome.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return Redirect("~/Index.html");
         }
 
         public ActionResult About()

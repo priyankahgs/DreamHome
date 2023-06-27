@@ -252,7 +252,6 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="About.cshtml" />
     <Content Include="Contact.cshtml" />
-    <Content Include="Index.cshtml" />
     <Content Include="resources\css\blog.css.map" />
     <Content Include="resources\css\blog.scss" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
