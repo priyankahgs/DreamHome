@@ -53,7 +53,7 @@ button:focus:not(:focus-visible) {
 }
 
 h2 {
-  font-size: 2.9rem;
+  font-size: 2.6rem;
 }
 @media (max-width: 767px) {
   h2 {
@@ -308,7 +308,7 @@ header {
 }
 .about-us .right-section {
   background: url(../images/about-us.png) no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 @media (max-width: 1400px) {
   .about-us .right-section {
@@ -331,7 +331,7 @@ header {
 .about-us .left-section form {
   margin-top: 2rem;
   background-color: #f6f6f6;
-  padding: 3rem 3rem 1.5rem 3rem;
+  padding: 1.5rem 3rem 1.5rem 3rem;
   width: 500px;
   float: right;
 }
@@ -594,7 +594,7 @@ form label {
   font-weight: 500;
 }
 form label span {
-  color: #000;
+  color: red;
 }
 form .form-check {
   padding-left: 17px;
@@ -947,9 +947,9 @@ form .form-check a {
   font-weight: 500;
   color: #32322e;
   font-size: 14px;
-  width: 100px;
+  width: 115px;
   position: absolute;
-  left: -23px;
+  left: -32px;
   top: 55px;
 }
 @media (max-width: 575px) {
@@ -960,7 +960,7 @@ form .form-check a {
 .steps #stepsSlider .carousel-indicators button .number {
   position: absolute;
   top: 4px;
-  left: -25px;
+  left: -32px;
   font-weight: 600;
   font-size: 28px;
   color: #939393;
@@ -968,7 +968,7 @@ form .form-check a {
 @media (max-width: 575px) {
   .steps #stepsSlider .carousel-indicators button .number {
     display: block;
-    left: -33px;
+    left: -40px;
     top: 5px;
     font-size: 1rem;
   }
@@ -1018,7 +1018,7 @@ form .form-check a {
   list-style: none;
 }
 .reasons .d-grid ul li {
-  width: 26%;
+  width: 41%;
 }
 @media (max-width: 1200px) {
   .reasons .d-grid ul li {
@@ -1027,8 +1027,8 @@ form .form-check a {
 }
 @media (max-width: 767px) {
   .reasons .d-grid ul li {
-    width: auto;
-    margin-right: 1.5rem;
+    width: 34%;
+    margin-right: 0rem;
   }
 }
 .reasons .d-grid ul li .number {
@@ -1036,7 +1036,7 @@ form .form-check a {
   font-family: "HelveticaNeueLt";
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  line-height: 30px;
+  line-height: normal;
 }
 @media (max-width: 767px) {
   .reasons .d-grid ul li .number {
@@ -1049,10 +1049,15 @@ form .form-check a {
 }
 .reasons .d-grid ul li:last-child {
   margin-right: 0;
-  width: auto;
+  width: 34%;
 }
 .reasons #reasonSlider {
-  margin-top: 75px;
+  margin-top: 50px;
+}
+@media (max-width: 991px) {
+  .reasons #reasonSlider {
+    margin-top: 15px;
+  }
 }
 .reasons #reasonSlider .d-grid {
   grid-template-columns: 80% 1fr;
@@ -1754,47 +1759,8 @@ form .form-check a {
   background-image: url("../images/accordion-minus.svg");
 }
 
-#more {
-  display: none;
-  margin-top: 0.5rem;
-}
-
-abbr {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.abbr-one-line {
-  display: initial;
-}
-
-.btn-dark:hover {
-  cursor: pointer;
-}
-
-.form-control.select-css.form-ico {
-  background: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
-  padding-left: 0rem !important;
-  border-bottom: 1px solid #bfbfbf;
-  padding: 0;
-  padding: 0.5rem 0rem 0rem !important;
-  font-weight: 500;
-  height: calc(2.5rem + 2px);
-}
-
-.form-control.select-css.form-ico:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-.moreContent {
-  color: blue;
-  cursor: pointer;
-  text-decoration: none;
+p {
+  font-weight: 300;
 }
 
 .dark-bg {
@@ -1818,7 +1784,7 @@ abbr {
   position: absolute;
   left: -15%;
   top: 0;
-  background: url("../images/img1.jpg") no-repeat;
+  background: url("../images/service-banner.jpg") no-repeat;
   background-size: auto;
   background-position: left top;
 }
@@ -1889,10 +1855,16 @@ abbr {
 .points ul li {
   list-style: none;
   position: relative;
-  padding-left: 42px;
+  padding-left: 45px;
   margin-bottom: 2rem;
+  padding-top: 5px;
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .points ul li {
+    margin-bottom: 0.5rem;
+  }
+}
+@media (max-device-width: 576px) {
   .points ul li {
     margin-bottom: 0.5rem;
   }
@@ -1901,7 +1873,7 @@ abbr {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  left: 5px;
   width: 33px;
   height: 33px;
   background: url("../images/bullet.png") no-repeat;
@@ -1927,11 +1899,18 @@ abbr {
   left: 0;
   padding-left: 2rem;
 }
+@media (max-device-width: 576px) {
+  .service-btn {
+    bottom: -15px;
+    z-index: 0;
+  }
+}
 .service-btn .btn-service {
   border-radius: 0;
   border: 1px #32322e solid;
   font-weight: 600;
   font-size: 1rem;
+  margin-top: 0;
 }
 .service-btn .btn-service:hover {
   background-color: #32322e;
@@ -2047,7 +2026,12 @@ abbr {
   background-color: #32322e !important;
   color: #fff;
   font-weight: 600;
-  padding: 20px !important;
+  padding: 20px 40px !important;
+}
+
+.td-dark span {
+  display: block;
+  font-weight: 300;
 }
 
 .dark-bg-slider {
@@ -2059,11 +2043,11 @@ abbr {
     padding: 6.5rem 0;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   .dark-bg-slider {
     background: linear-gradient(90deg, #32322e 44.333333%, #fff 10%);
     position: relative;
-    padding: 5rem 0;
+    padding: 5rem 0 2.5rem;
     border-right: 0px;
   }
   .dark-bg-slider::before {
@@ -2089,12 +2073,17 @@ abbr {
 }
 @media (min-width: 1366px) {
   .left-side {
-    padding: 1.5rem 3rem 1.5rem 6rem !important;
+    padding: 0rem 1.5rem 3.5rem 6rem !important;
   }
 }
 @media (min-width: 1600px) {
   .left-side {
-    padding: 1.5rem 3rem 1.5rem 8rem !important;
+    padding: 0rem 3rem 3.5rem 8rem !important;
+  }
+}
+@media (min-width: 2560px) {
+  .left-side {
+    padding: 1.5rem 3rem 1.5rem 12rem !important;
   }
 }
 
@@ -2210,4 +2199,54 @@ abbr {
 
 .dark-form .form-control {
   color: #fff;
+}
+
+.slick-dots {
+  bottom: -15px !important;
+}
+@media (max-width: 1200px) {
+  .slick-dots {
+    bottom: 15px !important;
+  }
+}
+@media (max-width: 991px) {
+  .slick-dots {
+    bottom: 18px !important;
+  }
+}
+@media (max-width: 576px) {
+  .slick-dots {
+    bottom: 15px !important;
+  }
+}
+
+.slick-dots li.slick-active button:before {
+  color: black !important;
+}
+
+.slick-dots li button:before {
+  color: #b5b5b5 !important;
+}
+
+.td-active {
+  background-color: #f6f6f6 !important;
+}
+
+ul.full-home {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul.full-home li {
+  position: relative;
+  padding-left: 25px;
+}
+ul.full-home li::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: url("../images/small-tick.png") no-repeat;
 }/*# sourceMappingURL=service.css.map */

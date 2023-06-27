@@ -309,7 +309,7 @@ header {
 }
 .about-us .right-section {
   background: url(../images/about-us.png) no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 @media (max-width: 1400px) {
   .about-us .right-section {
@@ -332,7 +332,7 @@ header {
 .about-us .left-section form {
   margin-top: 2rem;
   background-color: #f6f6f6;
-  padding: 3rem 3rem 1.5rem 3rem;
+  padding: 1.5rem 3rem 1.5rem 3rem;
   width: 500px;
   float: right;
 }
@@ -595,7 +595,7 @@ form label {
   font-weight: 500;
 }
 form label span {
-  color: #000;
+  color: red;
 }
 form .form-check {
   padding-left: 17px;
@@ -948,9 +948,9 @@ form .form-check a {
   font-weight: 500;
   color: #32322e;
   font-size: 14px;
-  width: 100px;
+  width: 115px;
   position: absolute;
-  left: -23px;
+  left: -32px;
   top: 55px;
 }
 @media (max-width: 575px) {
@@ -961,7 +961,7 @@ form .form-check a {
 .steps #stepsSlider .carousel-indicators button .number {
   position: absolute;
   top: 4px;
-  left: -25px;
+  left: -32px;
   font-weight: 600;
   font-size: 28px;
   color: #939393;
@@ -1038,11 +1038,6 @@ form .form-check a {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   line-height: 30px;
-}
-@media (max-width: 1200px) {
-  .reasons .d-grid ul li .number {
-    font-size: 2rem;
-  }
 }
 @media (max-width: 767px) {
   .reasons .d-grid ul li .number {
@@ -1758,49 +1753,6 @@ form .form-check a {
 }
 .accordion-button:not(.collapsed)::after {
   background-image: url("../images/accordion-minus.svg");
-}
-
-#more {
-  display: none;
-  margin-top: 0.5rem;
-}
-
-abbr {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.abbr-one-line {
-  display: initial;
-}
-
-.btn-dark:hover {
-  cursor: pointer;
-}
-
-.form-control.select-css.form-ico {
-  background: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
-  padding-left: 0rem !important;
-  border-bottom: 1px solid #bfbfbf;
-  padding: 0;
-  padding: 0.5rem 0rem 0rem !important;
-  font-weight: 500;
-  height: calc(2.5rem + 2px);
-}
-
-.form-control.select-css.form-ico:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-.moreContent {
-  color: blue;
-  cursor: pointer;
-  text-decoration: none;
 }
 
 @font-face {
@@ -2112,7 +2064,7 @@ header {
 }
 .about-us .right-section {
   background: url(../images/about-us.png) no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 @media (max-width: 1400px) {
   .about-us .right-section {
@@ -2135,7 +2087,7 @@ header {
 .about-us .left-section form {
   margin-top: 2rem;
   background-color: #f6f6f6;
-  padding: 3rem 3rem 1.5rem 3rem;
+  padding: 1.5rem 3rem 1.5rem 3rem;
   width: 500px;
   float: right;
 }
@@ -2398,7 +2350,7 @@ form label {
   font-weight: 500;
 }
 form label span {
-  color: #000;
+  color: red;
 }
 form .form-check {
   padding-left: 17px;
@@ -2751,9 +2703,9 @@ form .form-check a {
   font-weight: 500;
   color: #32322e;
   font-size: 14px;
-  width: 100px;
+  width: 115px;
   position: absolute;
-  left: -23px;
+  left: -32px;
   top: 55px;
 }
 @media (max-width: 575px) {
@@ -2764,7 +2716,7 @@ form .form-check a {
 .steps #stepsSlider .carousel-indicators button .number {
   position: absolute;
   top: 4px;
-  left: -25px;
+  left: -32px;
   font-weight: 600;
   font-size: 28px;
   color: #939393;
@@ -2841,11 +2793,6 @@ form .form-check a {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   line-height: 30px;
-}
-@media (max-width: 1200px) {
-  .reasons .d-grid ul li .number {
-    font-size: 2rem;
-  }
 }
 @media (max-width: 767px) {
   .reasons .d-grid ul li .number {
@@ -3563,49 +3510,6 @@ form .form-check a {
   background-image: url("../images/accordion-minus.svg");
 }
 
-#more {
-  display: none;
-  margin-top: 0.5rem;
-}
-
-abbr {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.abbr-one-line {
-  display: initial;
-}
-
-.btn-dark:hover {
-  cursor: pointer;
-}
-
-.form-control.select-css.form-ico {
-  background: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
-  padding-left: 0rem !important;
-  border-bottom: 1px solid #bfbfbf;
-  padding: 0;
-  padding: 0.5rem 0rem 0rem !important;
-  font-weight: 500;
-  height: calc(2.5rem + 2px);
-}
-
-.form-control.select-css.form-ico:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-.moreContent {
-  color: blue;
-  cursor: pointer;
-  text-decoration: none;
-}
-
 .dark-bg {
   background-color: #32322e;
 }
@@ -3627,7 +3531,7 @@ abbr {
   position: absolute;
   left: -15%;
   top: 0;
-  background: url("../images/img1.jpg") no-repeat;
+  background: url("../images/service-banner.jpg") no-repeat;
   background-size: auto;
   background-position: left top;
 }

@@ -42,7 +42,7 @@ $link-color:#495b91;
 .form-check-input:checked {background-color: #495b91;  border-color: #495b91;}
 .carousel-control-next, .carousel-control-prev {opacity: 1;width: 2%;}
 button:focus:not(:focus-visible) {    box-shadow: none;}
-h2 { font-size: 2.9rem;
+h2 { font-size: 2.6rem;
     @media (max-width: 767px)
     {
         font-size: 2rem;
@@ -373,7 +373,7 @@ header
     .right-section
     {
         background: url(../images/about-us.png) no-repeat;
-        background-size: 100%;
+        background-size: cover;
         @media (max-width: 1400px)
         {
             background-size: cover;
@@ -402,7 +402,7 @@ header
             }
             margin-top: 2rem;
             background-color: $light-grey-color;
-            padding: 3rem 3rem 1.50rem 3rem;
+            padding: 1.5rem 3rem 1.50rem 3rem;
             width: 500px;
             float: right;
             @media (max-width: 1200px)
@@ -692,7 +692,7 @@ form
         font-weight: 500;
         span
         {
-            color: #000;
+            color: red;
         }
     }
     .form-check
@@ -1081,9 +1081,9 @@ form
                     font-weight: 500;
                     color: $primary-color;
                     font-size: 14px;
-                    width: 100px;
+                    width: 115px;
                     position: absolute;
-                    left: -23px;
+                    left: -32px;
                     top: 55px;
                     @media (max-width: 575px)
                     {
@@ -1094,15 +1094,14 @@ form
                 {
                     position: absolute;
                     top: 4px;
-                    left: -25px;
+                    left: -32px;
                     font-weight: 600;
                     font-size: 28px;
                     color: #939393;
                     @media (max-width: 575px)
                     {
-                        display: block;
-                        
-                        left: -33px;
+                        display: block;                        
+                        left: -40px;
                         top:5px;
                         font-size: 1rem;
                     }
@@ -1165,12 +1164,11 @@ form
                 @media (max-width: 1200px)
                 {
                     margin-right: 2.5rem;
-
                 }
                 @media (max-width: 767px)
                 {
-                    width: auto;
-                    margin-right: 1.5rem;
+                    width: 34%;
+                    margin-right: 0rem;
                 }
                 .number
                 {
@@ -1178,11 +1176,7 @@ form
                     font-family: $font-family-heading;
                     font-size: 2.5rem;
                     margin-bottom: 0.5rem;
-                    line-height: 30px;
-                    @media (max-width: 1200px)
-                    {
-                        font-size: 2rem;
-                    }
+                    line-height: normal;
                     @media (max-width: 767px)
                     {
                         font-size: 1.5rem;
@@ -1198,13 +1192,16 @@ form
             li:last-child
             {
                 margin-right: 0;
-                width: auto;
+                width: 34%; 
             }
         }
     }
     #reasonSlider
     {
-        margin-top: 75px;
+        margin-top: 50px;
+        @media (max-width: 991px){
+            margin-top: 15px;
+        }
         .d-grid
         {
             grid-template-columns: 80% 1fr;
@@ -2066,26 +2063,3 @@ li
        background-image: url("../images/accordion-minus.svg");
    }
  }
- #more {display: none;margin-top: 0.5rem;}
- 
- abbr {
-   display: block;
-   margin-bottom: 0.5rem;
-}
-.abbr-one-line {    display: initial;}
-.btn-dark:hover {cursor: pointer;}
-.form-control.select-css.form-ico{background: none;
-   border-top: none;
-   border-left: none;
-   border-right: none;
-   border-radius: 0;
-   padding-left: 0rem !important;
-
-   border-bottom: 1px solid #bfbfbf;
-   padding: 0;
-   padding: 0.5rem 0rem 0rem !important;
-   font-weight: 500;
-   height: calc(2.5rem + 2px);}
-   .form-control.select-css.form-ico:focus 
-   {outline: none; box-shadow: none;}
-   .moreContent {color: blue; cursor: pointer;  text-decoration: none;}

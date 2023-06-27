@@ -1,5 +1,39 @@
 $(document).ready(function () {
    
+    $('.points_slide').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        // prevArrow: ' <button class="slick-prev slick-arrow" aria-label="Previous" type="button"><img src="resources/images/arrow-left.svg" /> </button>',
+        // nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><img src="resources/images/arrow-right.svg" /></button>',
+        dots: true,
+
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 1
+            }
+        },
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 1
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+    });
     $('.testimonial').slick({
         infinite: true,
         slidesToShow: 1,
@@ -34,7 +68,6 @@ $(document).ready(function () {
             }
         }]
     });
-
 
     $('.designSlider').slick({
 
@@ -145,20 +178,31 @@ $(document).ready(function () {
 
 
     $('#send').click(function (event) {
-
         event.preventDefault();
-
-
         if (validateExp()) {
             var resultData = $('#consultForm').serialize();
             console.log("validate")
         }
         else {
             console.log("not validate")
-
         }
     });
-
+    
+    $("#pPolicy").click(function(){
+        $("#privacyPolicy").modal("show");
+    });
+    $("#pPolicyFt").click(function(){
+        $("#privacyPolicy").modal("show");
+    });
+    $("#termsbtn").click(function(){
+        $("#terms").modal("show");
+    });
+    $("#termsbtnFt").click(function(){
+        $("#terms").modal("show");
+    });
+    $('.closeBtn').click(function() { 
+        $("#privacyPolicy,#terms").modal('hide'); 
+    });
 
 });
 

@@ -18,136 +18,6 @@
     <script type="text/javascript" src="resources/js/slick.js"></script>
     <script type="text/javascript" src="resources/js/slick.min.js"></script>
     <script type="text/javascript" src="resources/js/custom.js"></script>
-</head>
-<body>
-
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="resources/images/logo.png" alt="" title="" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
-                        <li class="nav-item"><a href="service.html" class="nav-link active hover-underline-animation">Service</a></li>
-                        <li class="nav-item"><a href="ideas.html" class="nav-link">Ideas</a></li>
-                        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                        <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Request Quote</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <section class="Style-home dark-bg">
-            <div class="container-fluid p-0">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="container bg-image px-3">
-                            <div class="row">
-                                <div class="col-lg-8 col-sm-6 z-index-1 py-5">
-                                    <h2>Style Your Home<br class="d-lg-block d-none"> With Us</h2>
-                                </div>
-                                <div class="col-lg-4 col-sm-6 text-white dark-bg p-5 z-index-1">
-                                    <form id="consultForm" class="dark-form">
-                                        <h4>Consult For Your Dream Home</h4>
-                                        <div class="form-floating">
-                                            <input type="text" maxlength="50" name="c" onchange="getValidationMessageName();" onkeydown="return isAlphabetKey(event, 'name')" id="txtexpName" class="form-control form-ico form-ico-01 undefined" required="" placeholder="Your Name">
-
-                                            <label for="name">Name<span>*</span></label>
-                                            <small id="spnName" class="form-text text-danger"></small>
-                                        </div>
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="txtexpEmail" placeholder="Enter email" name="txtexpEmail" maxlength="50" onchange="getValidationMessageEmail();" required="">
-                                            <label for="email">Email ID<span>*</span></label>
-                                            <small id="spnEmail" class="text-danger"></small>
-                                        </div>
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="txtexpPhone" placeholder="Mobile Number" name="txtexpPhone" maxlength="10" onchange="getValidationMessagePhone();" onkeydown="return isNumberKey(event,'number')" required="">
-                                            <label for="number">Mobile Number<span>*</span></label>
-                                            <small id="spnMobileNumber" class="text-danger"></small>
-                                        </div>
-
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="txtexpPinCode" placeholder="City Pincode" maxlength="6" name="txtexpPinCode" onchange="getValidationMessagePinCode();" onkeydown="return isNumberKeyy(event,'number')" required="">
-                                            <label for="pincode">Site Pin Code<span>*</span></label>
-                                            <small id="spnPinCode" class="text-danger"></small>
-                                        </div>
-                                        <div class="form-floating">
-                                            <select name="City" id="City" class="form-control select-css form-ico" onchange="CityChange()">
-                                                <option value="0" selected="">City*</option>
-                                                <option value="Bangalore">Bangalore </option>
-                                                <option value="Others">Others </option>
-
-                                            </select>
-
-                                            <small id="spnCity" class="text-danger"></small>
-                                        </div>
-                                        <div id="Div_Others" style="display:none">
-                                            <div class="form-floating">
-                                                <p style="color:white">We are currently offering DREAM HOME service in Bangalore. We will get in touch with you when we start the service in your city. Thank you.</p>
-                                            </div>
-                                        </div>
-                                        <div id="Div_Bangalore" style="display:none">
-                                            <div class="form-floating">
-                                                <select name="PreferredLanguage" id="PreferredLanguage" class="form-control select-css form-ico">
-                                                    <option value="0" selected="">Preferred Language*</option>
-                                                    <option value="English">English </option>
-                                                    <option value="Hindi">Hindi </option>
-                                                    <option value="Kannada">Kannada </option>
-                                                </select>
-
-                                                <small id="spnPreferredLanguage" class="text-danger"></small>
-                                            </div>
-                                            <div class="form-floating">
-                                                <select name="DoingUpFor" id="DoingUpFor" class="form-control select-css form-ico">
-                                                    <option value="0" selected="">I am doing up my*</option>
-                                                    <option value="Apartment">Apartment </option>
-                                                    <option value="Villa">Villa </option>
-                                                    <option value="Bungalow">Bungalow </option>
-                                                </select>
-
-                                                <small id="spnDoingUpFor" class="text-danger"></small>
-                                            </div>
-                                            <div class="form-floating">
-                                                <select name="DoingInteriorsFor" id="DoingInteriorsFor" class="form-control select-css form-ico">
-                                                    <option value="0" selected="">I am doing interiors for*</option>
-                                                    <option value="New House">New House </option>
-                                                    <option value="Renovation">Renovation </option>
-                                                </select>
-
-                                                <small id="spnDoingInteriorsFor" class="text-danger"></small>
-                                            </div>
-                                        </div>
-                                        <div class="form-check">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" id="chkAccept" value="" checked="checked"> By submitting this form, you agree to the <a href="#">privacy policy</a> and <a href="#">terms of use</a>.
-                                                <small id="spnAccept" class="text-danger d-block"></small>
-                                            </label>
-                                        </div><label id="ErrorMessage" class="alert alert-danger mx-auto mt-3"
-                                                     style="display:none;margin-top : 15px"></label>
-                                        <button type="button" id="send" name="send" class="btn btn-white">Consult Now</button>
-
-
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <ul class="rightSticky">
-            <li>
-                <a href="#"><img src="resources/images/whatsapp-icon.svg" class="img-fluid"></a>
-            </li>
-            <li>
-                <a href="#consultForm"><img src="resources/images/email-icon.svg" class="img-fluid"></a>
-            </li>
-        </ul>
-    </header>
-
     <style>
         .form-control.select-css.form-ico {
             color: #fff
@@ -198,19 +68,165 @@
         .form-floating select option {
             background: #32322e;
         }
+        .namefield .d-grid{grid-template-columns: 15% 1fr;}
+        .namefield .title {border-bottom: 1px solid #bfbfbf;}
+        .namefield select{ border: none; padding-bottom: 6px; background: transparent;}
     </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="resources/images/logo.png" alt="" title="" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
+                        <li class="nav-item"><a href="service.html" class="nav-link active hover-underline-animation">Services</a></li>
+                        <li class="nav-item"><a href="ideas.html" class="nav-link">Ideas</a></li>
+                        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Request Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="Style-home dark-bg">
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="container bg-image px-3">
+                            <div class="row">
+                                <div class="col-lg-8 col-sm-6 z-index-1 py-5">
+                                    <h2>Design Your Dream<br class="d-lg-block d-none"> Home Today</h2>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 text-white dark-bg p-5 z-index-1">
+                                    <form id="consultForm" class="dark-form">
+                                        <h4>Transform Your House Into Your Dream Home</h4>
+                                        <div class="namefield">
+                                            <div class="d-grid align-items-center">
+                                              <div class="title">
+                                                  <select name="title" class="text-white">
+                                                      <option value="Mr."> Mr.</option>
+                                                      <option value="Mrs."> Mrs.</option>
+                                                  </select>
+                                              </div>
+                                              <div class="form-floating mt-0">
+                                                  <input type="text" maxlength="50" name="c" onchange="getValidationMessageName();" onkeydown="return isAlphabetKey(event, 'name')" id="txtexpName" class="form-control form-ico form-ico-01 undefined" required="" placeholder="Your Name">
+                                                  <label for="name">Name<span>*</span></label>
+                                              </div>
+                                            </div> 
+                                          <small id="spnName" class="form-text text-danger"></small>
+                                      </div>
+                                        <!-- <div class="form-floating">
+                                            <input type="text" maxlength="50" name="c" onchange="getValidationMessageName();" onkeydown="return isAlphabetKey(event, 'name')" id="txtexpName" class="form-control form-ico form-ico-01 undefined" required="" placeholder="Your Name">
+
+                                            <label for="name">Name<span>*</span></label>
+                                            <small id="spnName" class="form-text text-danger"></small>
+                                        </div> -->
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="txtexpEmail" placeholder="Enter email" name="txtexpEmail" maxlength="50" onchange="getValidationMessageEmail();" required="">
+                                            <label for="email">Email ID<span>*</span></label>
+                                            <small id="spnEmail" class="text-danger"></small>
+                                        </div>
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="txtexpPhone" placeholder="Mobile Number" name="txtexpPhone" maxlength="10" onchange="getValidationMessagePhone();" onkeydown="return isNumberKey(event,'number')" required="">
+                                            <label for="number">Mobile Number<span>*</span></label>
+                                            <small id="spnMobileNumber" class="text-danger"></small>
+                                        </div>
+
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="txtexpPinCode" placeholder="City Pincode" maxlength="6" name="txtexpPinCode" onchange="getValidationMessagePinCode();" onkeydown="return isNumberKeyy(event,'number')" required="">
+                                            <label for="pincode">Site Pin Code<span>*</span></label>
+                                            <small id="spnPinCode" class="text-danger"></small>
+                                        </div>
+                                        <div class="form-floating">
+                                            <select name="City" id="City" class="form-control select-css form-ico" onchange="CityChange()">
+                                                <option value="0" selected="">City*</option>
+                                                <option value="Bangalore">Bengaluru </option>
+                                                <option value="Others">Others </option>
+
+                                            </select>
+
+                                            <small id="spnCity" class="text-danger"></small>
+                                        </div>
+                                        <div id="Div_Others" style="display:none">
+                                            <div class="form-floating">
+                                                <p style="color:white">We are currently offering DREAM HOME service in Bangalore. We will get in touch with you when we start the service in your city. Thank you.</p>
+                                            </div>
+                                        </div>
+                                        <div id="Div_Bangalore" style="display:none">
+                                            <div class="form-floating">
+                                                <select name="PreferredLanguage" id="PreferredLanguage" class="form-control select-css form-ico">
+                                                    <option value="0" selected="">Preferred Language*</option>
+                                                    <option value="English">English </option>
+                                                    <option value="Hindi">Hindi </option>
+                                                    <option value="Kannada">Kannada </option>
+                                                </select>
+
+                                                <small id="spnPreferredLanguage" class="text-danger"></small>
+                                            </div>
+                                            <div class="form-floating">
+                                                <select name="DoingUpFor" id="DoingUpFor" class="form-control select-css form-ico">
+                                                    <option value="0" selected="">I am doing up my*</option>
+                                                    <option value="Apartment">Apartment </option>
+                                                    <option value="Villa">Villa </option>
+                                                    <option value="Bungalow">Bungalow </option>
+                                                </select>
+
+                                                <small id="spnDoingUpFor" class="text-danger"></small>
+                                            </div>
+                                            <div class="form-floating">
+                                                <select name="DoingInteriorsFor" id="DoingInteriorsFor" class="form-control select-css form-ico">
+                                                    <option value="0" selected="">I am doing interiors for*</option>
+                                                    <option value="New House">New House </option>
+                                                    <option value="Renovation">Renovation </option>
+                                                </select>
+
+                                                <small id="spnDoingInteriorsFor" class="text-danger"></small>
+                                            </div>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" id="chkAccept" value="" checked="checked"> By submitting this form, you agree to the <a href="javascript:;" id="pPolicy">privacy policy</a> and <a href="javascript:;" id="termsbtn">terms of use</a>.
+                                                <small id="spnAccept" class="text-danger d-block"></small>
+                                            </label>
+                                        </div><label id="ErrorMessage" class="alert alert-danger mx-auto mt-3"
+                                                     style="display:none;margin-top : 15px"></label>
+                                        <button type="button" id="send" name="send" class="btn btn-white">Consult Now</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <ul class="rightSticky">
+            <li>
+                <a href="tel:7666 60 60 60"><img src="resources/images/whatsapp-icon.svg" class="img-fluid"></a>
+            </li>
+            <li>
+                <a href="#consultForm"><img src="resources/images/email-icon.svg" class="img-fluid"></a>
+            </li>
+        </ul>
+    </header>
+
+    
     <!-- main container -->
     <section class="about-us py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 left-pad">
                     <h3>
-                        Your Wish For Home Interiors,<br class="d-lg-block d-none">
-                        Our Design Services!
+                        Create Your Dream Home<br class="d-lg-block d-none">
+                        With Our Expertise
                     </h3>
                 </div>
                 <div class="col-lg-7 left-pad">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.  amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.  dolore magna aliqua. </p>
+                    <p>With our home interior services, create the perfect living space for you and your family. Our experts provide a personalised design that beautifully captures your vision and turns your space into a delightful oasis that will take your breath away. Let us help you create the home of your dreams! </p>
                 </div>
             </div>
         </div>
@@ -219,75 +235,111 @@
     <section class="design dark-bg-slider">
         <div class="container-fluid">
             <div class="row d-flex">
-                <div class="col-lg-4 dark-bg align-self-center">
+                <div class="col-xl-4 dark-bg align-self-start">
                     <div class="w-border left-side py-3">
                         <h3 class="text-white">
-                            Full <br>
-                            Home Interiors
+                            Full Home  <br>
+                            Interior Services
                         </h3>
                         <p class="text-white">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                            We offer comprehensive interior design services, covering everything from painting, waterproofing, civil modifications , woodwork, lighting, electrical work, plumbing, landscaping and more. Our team creates stunning spaces inspired by various styles such as modern, contemporary, traditional, bohemian, industrial, farmhouse, transitional, Victorian, Mediterranean and Scandinavian and many more.
                         </p>
-                        <button type="button" class="btn btn-outline my-3">Book This For Me</button>
+                        <ul class="full-home text-white">
+                            <li>Collaboration With Reputed Design Houses </li>
+                            <li>Customised Solutions</li>
+                            <li>Premium Designs</li>
+                            <li>Skilled Craftsmen</li>
+                            <li>Regular Supervision</li>
+                        </ul>
+                        <!-- <button type="button" class="btn btn-outline my-3">Book This For Me</button> -->
                     </div>
                 </div>
-                <div class="col-lg-8 p-0">
+                <div class="col-xl-8 p-0">
                     <div class="serviceHomeSlider">
                         <div class="item">
-                            <img src="resources/images/home-interiors-1.jpg" class="img-fluid" />
+                            <img src="resources/images/full-home-interior-1.jpg" class="img-fluid" />
                         </div>
                         <div class="item">
-                            <img src="resources/images/home-interiors-2.jpg" class="img-fluid" />
+                            <img src="resources/images/full-home-interior-2.jpg" class="img-fluid" />
                         </div>
                         <div class="item">
-                            <img src="resources/images/home-interiors-1.jpg" class="img-fluid" />
+                            <img src="resources/images/full-home-interior-3.jpg" class="img-fluid" />
                         </div>
                         <div class="item">
-                            <img src="resources/images/home-interiors-2.jpg" class="img-fluid" />
+                            <img src="resources/images/full-home-interior-4.jpg" class="img-fluid" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <section class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 offset-md-1 text-center pb-5">
-                    <h3>Service That Is Crafted With Detailings</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.  amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+                    <h3>Crafting Your Dream Home With Detail</h3>
+                    <p>We make sure that every aspect of the design and renovation process is personalised to meet the unique needs and preferences<br class="d-none d-lg-block"> of each customer.</p>
+                    <p>We offer a comprehensive interior design service that covers every aspect, ensuring you have a stress-free experience!</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 pb-3 pb-lg-0">
-                    <img src="resources/images/img2.jpg" class="img-fluid" />
+                    <img src="resources/images/crafted-for-detailing.jpg" class="img-fluid" />
                 </div>
                 <div class="col-sm-6 position-relative">
-                    <div class="points">
-                        <ul class="row">
-                            <li class="col-sm-6">
-                                <p>Wood Work, Cupboards, Storage Units etc.</p>
-                            </li>
-                            <li class="col-sm-6">
-                                <p>Electrical and Lighting Solutions</p>
-                            </li>
-                            <li class="col-sm-6">
-                                <p>Tiling and Plumbing Solutions</p>
-                            </li>
-                            <li class="col-sm-6">
-                                <p>Civil Work as required by the Design</p>
-                            </li>
-                            <li class="col-sm-6">
-                                <p>Ceiling Solutions</p>
-                            </li>
-                            <li class="col-sm-6">
-                                <p>Waterproofing and Painting</p>
-                            </li>
-                        </ul>
+                    <div class="points_slide">
+                        <div class="item">
+                            <div class="points">
+                                <ul class="row">
+                                    <li class="col-sm-6">
+                                        <p>Civil Work</p>
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <p>Waterproofing</p>
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <p>Wall Painting</p>
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <p>Plumbing</p>
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <p>Electrical and Lighting</p>
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <p>Wood Work</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="points">
+                                <ul class="row">
+                                    <li class="col-sm-6">
+                                        <p>Wardrobes</p>
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <p>Closets</p>
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <p>Storage Units</p>
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <p>Modular Kitchen </p>
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <p>Home Theatre</p>
+                                    </li>
+                                    <li class="col-sm-6">
+                                        <p>Landscaping</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+                    
                     <div class="service-btn">
-                        <a href="javascript:;" class="btn btn-service">Avail The Service Now</a>
+                        <a href="#consultForm" class="btn btn-service">Avail Our Services Now</a>
                     </div>
                 </div>
             </div>
@@ -299,21 +351,20 @@
     <section class="steps generic-margin">
         <div class="container">
             <div class="intro-para w-75 mx-auto">
-                <h3 class="text-center mb-3">Simple Steps To Your Dream Home</h3>
-                <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                <h3 class="text-center mb-3">Your Dream Space, Our Ideas: The Dream Partnership!</h3>
+                <p class="text-center">Simple steps to create the dream home you've always wanted.</p>
             </div>
-
             <div id="stepsSlider" class="carousel slide" data-bs-ride="carousel" data-interval="false">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><span class="number">1</span> <span>Book An Appointment</span></button>
+                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><span class="number">1</span> <span>Get Started</span></button>
                     <hr class="divider">
-                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="1" aria-label="Slide 2"><span class="number">2</span> <span>Book our designers</span></button>
+                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="1" aria-label="Slide 2"><span class="number">2</span> <span>Meet Our Design Partners</span></button>
                     <hr class="divider">
-                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="2" aria-label="Slide 3"><span class="number">3</span> <span>Personalise Your Design</span></button>
+                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="2" aria-label="Slide 3"><span class="number">3</span> <span>From Vision to Visualisation</span></button>
                     <hr class="divider">
-                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="3" aria-label="Slide 4"><span class="number">4</span> <span>Production Initiation</span></button>
+                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="3" aria-label="Slide 4"><span class="number">4</span> <span>Let The Magic Begin</span></button>
                     <hr class="divider">
-                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="4" aria-label="Slide 5"><span class="number">5</span> <span>Move <br />In</span></button>
+                    <button type="button" data-bs-target="#stepsSlider" data-bs-slide-to="4" aria-label="Slide 5"><span class="number">5</span> <span>Your Dream <br />Home Awaits</span></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -322,31 +373,21 @@
                                 <img src="resources/images/steps.png" class="img-fluid" />
                             </div>
                             <div>
-                                <h3>Book An Appointment</h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos</p>
+                                <h3>Get Started</h3>
+                                <p>
+                                    Contact us to schedule a visit from a Berger Executive, who will be a part of this exciting journey to bring your dream home to life. 
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="d-grid">
                             <div>
-                                <img src="resources/images/steps.png" class="img-fluid" />
+                                <img src="resources/images/meet-design-partner.png" class="img-fluid" />
                             </div>
                             <div>
-                                <h3>Book Our Designers</h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="d-grid">
-                            <div>
-                                <img src="resources/images/steps.png" class="img-fluid" />
-                            </div>
-                            <div>
-                                <h3>Personalise Your Design</h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos</p>
+                                <h3>Meet Our Design Partners</h3>
+                                <p>Ready to make your dream home a reality? Meet our exceptional designers   and connect with them virtually from anywhere. Let's create your perfect home together!</p>
                             </div>
                         </div>
                     </div>
@@ -354,11 +395,11 @@
                     <div class="carousel-item">
                         <div class="d-grid">
                             <div>
-                                <img src="resources/images/steps.png" class="img-fluid" />
+                                <img src="resources/images/vision-visulisation.png" class="img-fluid" />
                             </div>
                             <div>
-                                <h3>Production Initiation</h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos</p>
+                                <h3>From Vision to Visualisation</h3>
+                                <p>Our expert designers turn your vision into reality with a detailed 3D model and carefully chosen materials. Our team handles every stage of the process of home styling, so you can sit back and enjoy your new beautiful abode.</p>
                             </div>
                         </div>
                     </div>
@@ -366,11 +407,23 @@
                     <div class="carousel-item">
                         <div class="d-grid">
                             <div>
-                                <img src="resources/images/steps.png" class="img-fluid" />
+                                <img src="resources/images/illustration-item-4.png" class="img-fluid" />
                             </div>
                             <div>
-                                <h3>Move In</h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos</p>
+                                <h3>Let The Magic Begin</h3>
+                                <p>With all the materials and work schedule in place, it's now time to start counting down the days until your dream home comes to life. Get ready to enjoy the comfort and beauty of your dream home!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-grid">
+                            <div>
+                                <img src="resources/images/your-dream-home-awaits.png" class="img-fluid" />
+                            </div>
+                            <div>
+                                <h3>Your Dream Home Awaits</h3>
+                                <p>Trust us to keep you in the loop with regular progress updates, ensuring that you are fully aware of what's happening every step of the way. When the time comes for the site handover, you can rest assured that we will handle it with the utmost care.</p>
                             </div>
                         </div>
                     </div>
@@ -386,6 +439,7 @@
                 </button>
             </div>
         </div>
+
     </section>
     <section class="dark-bg bg-d-partners">
         <div class="container">
@@ -393,7 +447,7 @@
                 <div class="col-md-6 align-self-center">
                     <div class="py-3 my-3 py-lg-5 my-lg-5 pe-lg-5 text-white">
                         <h2 class="pb-3">Our Design Partners</h2>
-                        <p class="text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos</p>
+                        <p class="text-white">Our design partners are experts in their field and bring their creativity and ingenuity to every project. With their help, we are able to offer our customers bespoke designs and provide comprehensive services.</p>
                     </div>
                 </div>
                 <div class="col-md-6 img-height px-0">
@@ -411,34 +465,53 @@
                     <div class="table-responsive">
                         <table class="table table-bordered text-center" style="border-top: transparent;">
                             <tr>
-                                <th width="25%" style="border: 0;">&nbsp;</th>
-                                <th width="40%" style="background: #efe8e0; border-top: 1px #bababa; solid; border-right: 1px #bababa4a; solid !important;" class="p-3 border-end">Choosing Berger Dream Home</th>
-                                <th width="35%" style="background: #efe8e0; border-top: 1px #bababa; solid" class="p-3">Choosing Other Interior Services</th>
+                                <th width="50%" style="border: 0;">&nbsp;</th>
+                                <th width="25%" style="background: #efe8e0; border-top: 0px #bababa solid; border-right: 1px #bababa4a solid !important;" class="p-3 border-end">Dream Homes</th>
+                                <th width="25%" style="background: #efe8e0; border-top: 0px #bababa solid;" class="p-3 th-st">Others</th>
                             </tr>
                             <tr>
-                                <td width="25%" align="center" class="td-dark p-3">Price</td>
-                                <td width="40%" class="p-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolores eos</td>
-                                <td width="35%" class="p-3">Natus error sit voluptatem accusantium doloremque dolores eos</td>
+                                <td width="50%" align="left" class="td-dark p-3">
+                                    Backed By A Century-Old Experience
+                                    <span>A rich legacy of knowledge, expertise and success.</span>
+                                 </td>
+                                <td width="25%" class="p-3" >
+                                    <img src="resources/images/tick-icon.png" class="img-fluid" alt="tick">
+                                </td>
+                                <td width="25%" class="p-3">
+                                    <img src="resources/images/cross-icon.png" class="img-fluid" alt="cross">
+                                </td>
                             </tr>
                             <tr>
-                                <td width="25%" align="center" class="td-dark p-3">The Process</td>
-                                <td width="40%" class="py-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolores eos</td>
-                                <td width="35%" class="py-3">Natus error sit voluptatem accusantium doloremque dolores eos</td>
+                                <td width="50%" align="left" class="td-dark p-3">
+                                    Comprehensive Service
+                                    <span>Landscaping, electrical, plumbing, woodwork, waterproofing or painting, no detail is left untouched.</span>
+                                </td>
+                                <td width="25%" class="py-3 td-active"><img src="resources/images/tick-icon.png" class="img-fluid" alt="tick"></td>
+                                <td width="25%" class="py-3 td-active"><img src="resources/images/cross-icon.png" class="img-fluid" alt="cross"></td>
                             </tr>
                             <tr>
-                                <td width="25%" align="center" class="td-dark p-3">The Process</td>
-                                <td width="40%" class="py-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolores eos</td>
-                                <td width="35%" class="py-3">Natus error sit voluptatem accusantium doloremque dolores eos</td>
+                                <td width="50%" align="left" class="td-dark p-3">
+                                    Personalised, Curated Designs
+                                    <span>We do not rely on pre-made templates, guaranteeing a truly unique and tailored interior experience.</span>
+                                </td>
+                                <td width="25%" class="py-3"><img src="resources/images/tick-icon.png" class="img-fluid" alt="tick"></td>
+                                <td width="25%" class="py-3"><img src="resources/images/cross-icon.png" class="img-fluid" alt="cross"></td>
                             </tr>
                             <tr>
-                                <td width="25%" align="center" class="td-dark p-3">Quality</td>
-                                <td width="40%" class="py-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolores eos</td>
-                                <td width="35%" class="py-3">Natus error sit voluptatem accusantium doloremque dolores eos</td>
+                                <td width="50%" align="left" class="td-dark p-3">
+                                    Collaboration with Reputed Design Houses
+                                    <span>Team up with elite design houses to bring you exclusive, one-of-a-kind designs.</span>
+                                </td>
+                                <td width="25%" class="py-3 td-active"><img src="resources/images/tick-icon.png" class="img-fluid" alt="tick"></td>
+                                <td width="25%" class="py-3 td-active"><img src="resources/images/cross-icon.png" class="img-fluid" alt="cross"></td>
                             </tr>
                             <tr>
-                                <td width="25%" align="center" class="td-dark p-3">Warranty</td>
-                                <td width="40%" class="py-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dolores eos</td>
-                                <td width="35%" class="py-3">Natus error sit voluptatem accusantium doloremque dolores eos</td>
+                                <td width="50%" align="left" class="td-dark p-3">
+                                    Top-Notch Products 
+                                    <span>Designs are built to last, thanks to the finest materials that are used.</span>
+                                </td>
+                                <td width="25%" class="py-3"><img src="resources/images/tick-icon.png" class="img-fluid" alt="tick"></td>
+                                <td width="25%" class="py-3"><img src="resources/images/tick-icon.png" class="img-fluid" alt="tick"></td>
                             </tr>
                         </table>
                     </div>
@@ -452,8 +525,9 @@
             <div class=" d-flex justify-content-end content">
                 <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12 col-12">
                     <div class="col-lg-7 col-md-9 col-sm-12 col-xs-12 col-12 pb-5">
-                        <h3>Home Transformation, Some Inspiration For You</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices  </p>
+                        <h3>Inspiration For Your Home Transformation</h3>
+                        <p>Browse through the latest home design trends to inspire your transformation. </p>
+                        <p>There's no better place to start than by exploring the latest home design trends. Whether you're hoping to update your living room, give your kitchen a fresh new look, or simply add some style to your space, keeping up with current trends is a great way to find inspiration and ideas for your home transformation project.</p>
                     </div>
                     <div class="serviceDesignSlider">
                         <div class="item">
@@ -461,19 +535,19 @@
                             <h4>Are you inspired? If yes, then book an appointment for your Dream Home with<br class="d-none d-lg-block d-xl-none"> our experts today!</h4>
                         </div>
                         <div class="item">
-                            <img src="resources/images/slide-2.jpg" class="img-fluid" />
+                            <img src="resources/images/home-transformation-4.jpg" class="img-fluid" />
                             <!-- <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4> -->
                         </div>
                         <div class="item">
-                            <img src="resources/images/slide-1.jpg" class="img-fluid" />
+                            <img src="resources/images/home-transformation-5.jpg" class="img-fluid" />
                             <h4>Are you inspired? If yes, then book an appointment for your Dream Home with<br class="d-none d-lg-block d-xl-none"> our experts today!</h4>
                         </div>
                         <div class="item">
-                            <img src="resources/images/slide-2.jpg" class="img-fluid" />
+                            <img src="resources/images/home-transformation-6.jpg" class="img-fluid" />
                             <!-- <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4> -->
                         </div>
                     </div>
-                    <a href="javascript:;" class="btn btn-service">Get in Touch with experts</a>
+                    <a href="#consultForm" class="btn btn-service">Get in Touch with experts</a>
                 </div>
             </div>
         </div>
@@ -481,8 +555,8 @@
 
     <section class="testimonials generic-margin">
         <div class="container">
-            <h3 class="text-center mb-3">Happy Clients</h3>
-            <p class="text-center">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form </p>
+            <h3 class="text-center mb-3">Transformative Home Design: Hear From Our Happy Customers!</h3>
+            <p class="text-center">Get inspired by stories of our ecstatic customers and see how we're changing lives one home at a time.</p>
             <div class="testimonial">
                 <div class="item">
                     <div class="d-grid">
@@ -530,67 +604,47 @@
             <div class="accordion" id="myAccordion">
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="headingOne">
-                        <button type="button" class="accordion-button  " data-bs-toggle="collapse" data-bs-target="#collapseOne">What is Berger Dream Homes service?</button>
+                        <button type="button" class="accordion-button  " data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Why should I hire an interior design service provider?
+                        </button>
                     </h3>
                     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#myAccordion">
                         <div class="card-body">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <p>An interior design service provider can turn your vision into reality, creating a cohesive design scheme that fits your style and lifestyle. At Dream Homes, we pride ourselves on our professionalism and dedication to understanding the unique style and lifestyle of our customers. We believe in creating a personalised and functional living space without taking the cookie cutter approach. </p>
+                            <p>Call us on <a href="tel:1800 120 6090">1800 120 6090</a> or <a href="#consultForm">click here</a> to fill the form. </p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="headingTwo">
-                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Is only new home projects undertaken or is renovation also undertaken?</button>
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Why choose Dream Homes for your home interior design needs?</button>
                     </h3>
                     <div id="collapseTwo" class="accordion-collapse collapse " data-bs-parent="#myAccordion">
                         <div class="card-body">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <p>Our expert team creates designs tailored to your needs, delivering exceptional workmanship and attention to detail. We'll handle everything from start to finish, giving you a hassle-free experience and a wonderful space that exceeds your expectations. </p>
+                            <p>Call us on <a href="tel:1800 120 6090">1800 120 6090</a> or <a href="#consultForm">click here</a> to fill the form. </p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="headingThree">
-                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">Do I need to be in town and visit site regularly?</button>
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">What services are typically included in home interior design?</button>
                     </h3>
                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
                         <div class="card-body">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <p>We'll work with you to create a design scheme that suits your needs and lifestyle. Our services also include home painting, waterproofing, space planning, colour schemes, lighting design and more. Our mission is to make your space both beautiful and functional, with every detail considered.</p>
+                            <p>Call us on <a href="tel:1800 120 6090">1800 120 6090</a> or <a href="#consultForm">click here</a> to fill the form. </p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="headingFour">
-                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour">Do I have to procure the raw materials needed?</button>
+                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour">What are some of the current trends in interior design styles?</button>
                     </h3>
                     <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
                         <div class="card-body">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingFive">
-                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive">What services do you offer?</button>
-                    </h3>
-                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                        <div class="card-body">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="headingSix">
-                        <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSix">Who all should I contact during the course of the project?</button>
-                    </h3>
-                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
-                        <div class="card-body">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <p>At Dream Homes, we stay up-to-date with the latest trends and can help you incorporate them into your home in a way that feels authentic and timeless.</p>
+                            <p>Call us on <a href="tel:1800 120 6090">1800 120 6090</a> or <a href="#consultForm">click here</a> to fill the form. </p>
                         </div>
                     </div>
                 </div>
@@ -623,7 +677,46 @@
         </div>
     </div>
 
-
+    <div class="modal fade" id="privacyPolicy" role="dialog">
+        <div class="modal-dialog modal-lg modal-xl modal-dialog-centered">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Privacy Policy</h4>
+              <button type="button" class="close closeBtn" data-dismiss="modal" onclick="CloseModal()">&times;</button>
+              
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default closeBtn" data-dismiss="modal" onclick="CloseModal()">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="modal fade" id="terms" role="dialog">
+        <div class="modal-dialog modal-lg modal-xl modal-dialog-centered">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Terms and Conditions</h4>
+              <button type="button" class="close closeBtn" data-dismiss="modal" onclick="CloseModal()">&times;</button>
+              
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default closeBtn" data-dismiss="modal" onclick="CloseModal()">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
 
     <!-- end of main container -->
     <footer class="footer">
@@ -632,13 +725,13 @@
                 <div class="left-section">
                     <div class=" ">
                         <ul class="footer-links">
-                            <li><a href="/sitemap.html">Sitemap</a></li>
+                            <li><a href="#">Sitemap</a></li>
                             <li class="vertical-divider-line">|</li>
-                            <li><a href="/disclaimer.html">Disclaimer</a></li>
+                            <li><a href="#">Disclaimer</a></li>
                             <li class="vertical-divider-line">|</li>
-                            <li><a href="/about-us/privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="javascript:;" id="pPolicyFt"> Privacy Policy</a></li>
                             <li class="vertical-divider-line">|</li>
-                            <li><a href="/terms-and-conditions.html">*Terms &amp; Conditions</a></li>
+                            <li><a href="javascript:;" id="termsbtnFt">*Terms &amp; Conditions</a></li>
                             <li class="vertical-divider-line d-none d-lg-block">|</li>
                         </ul>
                         <div class="footer-text">

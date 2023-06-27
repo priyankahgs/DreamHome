@@ -67,6 +67,9 @@
     .form-floating select option {
         background: #32322e;
     }
+    .namefield .d-grid{grid-template-columns: 15% 1fr;}
+    .namefield .title {border-bottom: 1px solid #bfbfbf;}
+    .namefield select{ border: none; padding-bottom: 5%; background: transparent;}
 </style>
 <body>
 
@@ -80,7 +83,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a href="index.html" class="nav-link " aria-current="page">Home</a></li>
-                        <li class="nav-item"><a href="service.html" class="nav-link">Service</a></li>
+                        <li class="nav-item"><a href="service.html" class="nav-link">Services</a></li>
                         <li class="nav-item"><a href="ideas.html" class="nav-link">Ideas</a></li>
                         <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                         <li class="nav-item"><a href="contact-us.html" class="nav-link active hover-underline-animation">Contact Us</a></li>
@@ -106,7 +109,7 @@
             </div>
             <ul class="rightSticky">
                 <li>
-                    <a href="#"><img src="resources/images/whatsapp-icon.svg" class="img-fluid"></a>
+                    <a href="tel:7666 60 60 60"><img src="resources/images/whatsapp-icon.svg" class="img-fluid"></a>
                 </li>
                 <li>
                     <a href="index.html#consultForm"><img src="resources/images/email-icon.svg" class="img-fluid"></a>
@@ -145,12 +148,27 @@
                 <div class="col-sm-6 Style-home">
                     <form id="consultForm" class="dark-form">
                         <h4>Consult For Your Dream Home</h4>
-                        <div class="form-floating">
+                        <div class="namefield">
+                            <div class="d-grid align-items-center">
+                              <div class="title">
+                                  <select name="title" class="text-white">
+                                      <option value="Mr."> Mr.</option>
+                                      <option value="Mrs."> Mrs.</option>
+                                  </select>
+                              </div>
+                              <div class="form-floating mt-0">
+                                  <input type="text" maxlength="50" name="c" onchange="getValidationMessageName();" onkeydown="return isAlphabetKey(event, 'name')" id="txtexpName" class="form-control form-ico form-ico-01 undefined" required="" placeholder="Your Name">
+                                  <label for="name">Name<span>*</span></label>
+                              </div>
+                            </div> 
+                          <small id="spnName" class="form-text text-danger"></small>
+                      </div>
+                        <!-- <div class="form-floating">
                             <input type="text" maxlength="50" name="c" onchange="getValidationMessageName();" onkeydown="return isAlphabetKey(event, 'name')" id="txtexpName" class="form-control form-ico form-ico-01 undefined" required="" placeholder="Your Name">
 
                             <label for="name">Name<span>*</span></label>
                             <small id="spnName" class="form-text text-danger"></small>
-                        </div>
+                        </div> -->
                         <div class="form-floating">
                             <input type="email" class="form-control" id="txtexpEmail" placeholder="Enter email" name="txtexpEmail" maxlength="50" onchange="getValidationMessageEmail();" required="">
                             <label for="email">Email ID<span>*</span></label>
@@ -215,7 +233,7 @@
                         </div>
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" id="chkAccept" value="" checked="checked"> By submitting this form, you agree to the <a href="#">privacy policy</a> and <a href="#">terms of use</a>.
+                                <input class="form-check-input" type="checkbox" id="chkAccept" value="" checked="checked"> By submitting this form, you agree to the <a href="javascript:;" id="pPolicy">privacy policy</a> and <a href="javascript:;" id="termsbtn">terms of use</a>.
                                 <small id="spnAccept" class="text-danger d-block"></small>
                             </label>
                         </div><label id="ErrorMessage" class="alert alert-danger mx-auto mt-3"
@@ -304,9 +322,9 @@
                             <li class="vertical-divider-line">|</li>
                             <li><a href="#">Disclaimer</a></li>
                             <li class="vertical-divider-line">|</li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="javascript:;" id="pPolicyFt"> Privacy Policy</a></li>
                             <li class="vertical-divider-line">|</li>
-                            <li><a href="#">*Terms &amp; Conditions</a></li>
+                            <li><a href="javascript:;" id="termsbtnFt">*Terms &amp; Conditions</a></li>
                             <li class="vertical-divider-line d-none d-lg-block">|</li>
                         </ul>
                         <div class="footer-text">
@@ -339,5 +357,45 @@
             </div>
         </div>
     </footer>
+    <div class="modal fade" id="privacyPolicy" role="dialog">
+        <div class="modal-dialog modal-lg modal-xl modal-dialog-centered">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Privacy Policy</h4>
+              <button type="button" class="close closeBtn" data-dismiss="modal" onclick="CloseModal()">&times;</button>
+              
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default closeBtn" data-dismiss="modal" onclick="CloseModal()">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="modal fade" id="terms" role="dialog">
+        <div class="modal-dialog modal-lg modal-xl modal-dialog-centered">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Terms and Conditions</h4>
+              <button type="button" class="close closeBtn" data-dismiss="modal" onclick="CloseModal()">&times;</button>
+              
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default closeBtn" data-dismiss="modal" onclick="CloseModal()">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
 </body>
 </html>

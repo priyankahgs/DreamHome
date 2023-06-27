@@ -308,7 +308,7 @@ header {
 }
 .about-us .right-section {
   background: url(../images/about-us.png) no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 @media (max-width: 1400px) {
   .about-us .right-section {
@@ -331,7 +331,7 @@ header {
 .about-us .left-section form {
   margin-top: 2rem;
   background-color: #f6f6f6;
-  padding: 3rem 3rem 1.5rem 3rem;
+  padding: 1.5rem 3rem 1.5rem 3rem;
   width: 500px;
   float: right;
 }
@@ -947,9 +947,9 @@ form .form-check a {
   font-weight: 500;
   color: #32322e;
   font-size: 14px;
-  width: 100px;
+  width: 115px;
   position: absolute;
-  left: -23px;
+  left: -32px;
   top: 55px;
 }
 @media (max-width: 575px) {
@@ -960,7 +960,7 @@ form .form-check a {
 .steps #stepsSlider .carousel-indicators button .number {
   position: absolute;
   top: 4px;
-  left: -25px;
+  left: -32px;
   font-weight: 600;
   font-size: 28px;
   color: #939393;
@@ -1018,7 +1018,7 @@ form .form-check a {
   list-style: none;
 }
 .reasons .d-grid ul li {
-  width: 26%;
+  width: 41%;
 }
 @media (max-width: 1200px) {
   .reasons .d-grid ul li {

@@ -1,7 +1,7 @@
 @import "custom.scss"; 
 
 $dark-brown-color:#32322e;
-
+p{font-weight: 300;}
 .dark-bg{background-color: $dark-brown-color;}
 .z-index-1{z-index: 9;}
 .Style-home{
@@ -15,7 +15,7 @@ $dark-brown-color:#32322e;
             position: absolute;
             left: -15%;
             top: 0;
-            background: url('../images/img1.jpg') no-repeat;
+            background: url('../images/service-banner.jpg') no-repeat;
             background-size: auto;
             background-position: left top;
 
@@ -90,16 +90,20 @@ $dark-brown-color:#32322e;
         li{ 
             list-style: none;            
             position: relative;
-            padding-left: 42px;
+            padding-left: 45px;
             margin-bottom: 2rem;
+            padding-top: 5px;
             @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+                margin-bottom: 0.5rem;
+            }
+            @media (max-device-width: 576px) {
                 margin-bottom: 0.5rem;
             }
             &::before{
                 content: '';
                 position: absolute;
                 top: 0;
-                left: 0;
+                left: 5px;
                 width: 33px;
                 height: 33px;
                 background: url('../images/bullet.png') no-repeat;
@@ -121,12 +125,18 @@ $dark-brown-color:#32322e;
     position: absolute;
     bottom: 0;
     left: 0;
+    
+    @media (max-device-width: 576px) {
+        bottom: -15px;
+        z-index: 0;
+    }
     padding-left: 2rem;
     .btn-service{
         border-radius: 0;
         border: 1px #32322e solid;
         font-weight: 600;
         font-size: 1rem;
+        margin-top:0;
         &:hover{
             background-color: #32322e;    
             color: #fff;        
@@ -222,7 +232,8 @@ $dark-brown-color:#32322e;
     }
     
 }
-.td-dark{background-color: #32322e !important; color: #fff; font-weight: 600; padding: 20px !important;}
+.td-dark{background-color: #32322e !important; color: #fff; font-weight: 600; padding: 20px 40px !important;}
+.td-dark span{display: block; font-weight: 300;;}
 .dark-bg-slider{
     position: relative;
     padding: 3.5rem 0;
@@ -231,8 +242,8 @@ $dark-brown-color:#32322e;
     }
     
     // background: linear-gradient(90deg, #32322e 45%, #fff 10%);
-    @media only screen and (min-width: 992px){
-        background: linear-gradient(90deg, #32322e 44.333333%, #fff 10%); position: relative; padding: 5rem 0;
+    @media only screen and (min-width: 1200px){
+        background: linear-gradient(90deg, #32322e 44.333333%, #fff 10%); position: relative; padding: 5rem 0 2.5rem;
         &::before{
             content: '';
             position: absolute;
@@ -253,10 +264,13 @@ $dark-brown-color:#32322e;
         padding: 1.5rem 3rem 1.5rem 4rem!important;
     }
     @media (min-width: 1366px){
-        padding: 1.5rem 3rem 1.5rem 6rem!important;
+        padding: 0rem 1.5rem 3.5rem 6rem!important;
     }
     @media (min-width: 1600px){
-        padding: 1.5rem 3rem 1.5rem 8rem!important;
+        padding: 0rem 3rem 3.5rem 8rem!important;
+    }
+    @media (min-width: 2560px){
+        padding: 1.5rem 3rem 1.5rem 12rem!important;
     }
 }
 .left-pad{
@@ -345,3 +359,40 @@ $dark-brown-color:#32322e;
     z-index: 9;
 }
 .dark-form .form-control{color:#fff}
+.slick-dots{
+    bottom: -15px !important;
+    @media (max-width: 1200px) {
+        bottom: 15px !important;
+    }
+    @media (max-width: 991px) {
+        bottom: 18px !important;
+    }
+    @media (max-width: 576px) {
+        bottom: 15px !important;
+    }
+}
+.slick-dots li.slick-active button:before{color: black !important;}
+.slick-dots li button:before{color: #b5b5b5 !important;}
+.td-active{background-color: #f6f6f6 !important;}
+ul{
+    &.full-home{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li{
+            position: relative;
+            padding-left: 25px;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 4px;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                background: url('../images/small-tick.png') no-repeat;
+            }
+            
+        }
+    }
+}

@@ -53,7 +53,7 @@ button:focus:not(:focus-visible) {
 }
 
 h2 {
-  font-size: 2.9rem;
+  font-size: 2.6rem;
 }
 @media (max-width: 767px) {
   h2 {
@@ -308,7 +308,7 @@ header {
 }
 .about-us .right-section {
   background: url(../images/about-us.png) no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 @media (max-width: 1400px) {
   .about-us .right-section {
@@ -331,7 +331,7 @@ header {
 .about-us .left-section form {
   margin-top: 2rem;
   background-color: #f6f6f6;
-  padding: 3rem 3rem 1.5rem 3rem;
+  padding: 1.5rem 3rem 1.5rem 3rem;
   width: 500px;
   float: right;
 }
@@ -594,7 +594,7 @@ form label {
   font-weight: 500;
 }
 form label span {
-  color: #000;
+  color: red;
 }
 form .form-check {
   padding-left: 17px;
@@ -947,9 +947,9 @@ form .form-check a {
   font-weight: 500;
   color: #32322e;
   font-size: 14px;
-  width: 100px;
+  width: 115px;
   position: absolute;
-  left: -23px;
+  left: -32px;
   top: 55px;
 }
 @media (max-width: 575px) {
@@ -960,7 +960,7 @@ form .form-check a {
 .steps #stepsSlider .carousel-indicators button .number {
   position: absolute;
   top: 4px;
-  left: -25px;
+  left: -32px;
   font-weight: 600;
   font-size: 28px;
   color: #939393;
@@ -968,7 +968,7 @@ form .form-check a {
 @media (max-width: 575px) {
   .steps #stepsSlider .carousel-indicators button .number {
     display: block;
-    left: -33px;
+    left: -40px;
     top: 5px;
     font-size: 1rem;
   }
@@ -1027,8 +1027,8 @@ form .form-check a {
 }
 @media (max-width: 767px) {
   .reasons .d-grid ul li {
-    width: auto;
-    margin-right: 1.5rem;
+    width: 34%;
+    margin-right: 0rem;
   }
 }
 .reasons .d-grid ul li .number {
@@ -1036,12 +1036,7 @@ form .form-check a {
   font-family: "HelveticaNeueLt";
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  line-height: 30px;
-}
-@media (max-width: 1200px) {
-  .reasons .d-grid ul li .number {
-    font-size: 2rem;
-  }
+  line-height: normal;
 }
 @media (max-width: 767px) {
   .reasons .d-grid ul li .number {
@@ -1054,10 +1049,15 @@ form .form-check a {
 }
 .reasons .d-grid ul li:last-child {
   margin-right: 0;
-  width: auto;
+  width: 34%;
 }
 .reasons #reasonSlider {
-  margin-top: 75px;
+  margin-top: 50px;
+}
+@media (max-width: 991px) {
+  .reasons #reasonSlider {
+    margin-top: 15px;
+  }
 }
 .reasons #reasonSlider .d-grid {
   grid-template-columns: 80% 1fr;
@@ -1757,47 +1757,4 @@ form .form-check a {
 }
 .accordion-button:not(.collapsed)::after {
   background-image: url("../images/accordion-minus.svg");
-}
-
-#more {
-  display: none;
-  margin-top: 0.5rem;
-}
-
-abbr {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.abbr-one-line {
-  display: initial;
-}
-
-.btn-dark:hover {
-  cursor: pointer;
-}
-
-.form-control.select-css.form-ico {
-  background: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
-  padding-left: 0rem !important;
-  border-bottom: 1px solid #bfbfbf;
-  padding: 0;
-  padding: 0.5rem 0rem 0rem !important;
-  font-weight: 500;
-  height: calc(2.5rem + 2px);
-}
-
-.form-control.select-css.form-ico:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-.moreContent {
-  color: blue;
-  cursor: pointer;
-  text-decoration: none;
 }/*# sourceMappingURL=custom.css.map */
